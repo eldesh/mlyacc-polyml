@@ -16,6 +16,7 @@ PREFIX      := /usr/local
 NAME        := mlyacc-polyml
 LIBNAME     := libmlyacc.poly
 
+DOCS        := mlyacc-polyml.pdf
 
 LIB_SRCS := $(wildcard lib/*)
 SRCS     := $(wildcard src/*) \
@@ -24,7 +25,7 @@ SRCS     := $(wildcard src/*) \
             src/yacc.grm.sml
 
 
-all:	$(NAME)
+all:	$(NAME) $(DOCS)
 
 
 $(NAME): $(NAME).o
@@ -60,8 +61,21 @@ src/%.grm.sig src/%.grm.sml: src/%.grm
 	@chmod -w $<.*
 
 
+doc/mlyacc.pdf:
+	$(MAKE) -C doc PDFLATEX:=$(PDFLATEX) mlyacc.pdf
+
+
+$(NAME).pdf: doc/mlyacc.pdf
+	cp doc/mlyacc.pdf $@
+
+
+.PHONY: docs
+docs: $(DOCS)
+
+
 .PHONY: clean
 clean:
 	-$(RM) $(NAME) $(NAME).o
 	-$(RM) $(LIBNAME)
+	$(MAKE) -C doc clean
 

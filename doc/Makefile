@@ -16,4 +16,4 @@ mlyacc.pdf: mlyacc.tex
 
 .PHONY: clean
 clean:
-	../../bin/clean
+	-$(RM) mlyacc.aux mlyacc.log mlyacc.toc mlyacc.pdf
