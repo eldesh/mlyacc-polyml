@@ -1,0 +1,10257 @@
+1 shift/reduce conflict
+
+error:  state 301: shift/reduce conflict (shift BAR, reduce by rule 195)
+
+state 0:
+
+	program : . expsAndTopdecs 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ABSTYPE	shift 65
+	ASTERISK	shift 64
+	CASE	shift 63
+	DATATYPE	shift 62
+	EQUALOP	shift 61
+	EXCEPTION	shift 60
+	DO	shift 59
+	FN	shift 58
+	FUN	shift 57
+	FUNCTOR	shift 56
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	INFIX	shift 52
+	INFIXR	shift 51
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LOCAL	shift 47
+	LPAREN	shift 46
+	NONFIX	shift 45
+	OP	shift 44
+	OPEN	shift 43
+	OVERLOAD	shift 42
+	RAISE	shift 41
+	SEMICOLON	shift 40
+	SIGNATURE	shift 39
+	STRUCTURE	shift 38
+	TYPE	shift 37
+	VAL	shift 36
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+	SHOW_BASIS	shift 26
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	decnolocal	goto 21
+	exp	goto 20
+	expnode	goto 19
+	expsAndTopdecs	goto 18
+	fixity	goto 17
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	program	goto 635
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	strdec	goto 8
+	strdecnode	goto 7
+	topdec	goto 6
+	topdecnode	goto 5
+	topdecs	goto 4
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	reduce by rule 3
+
+
+state 1:
+
+	const' : word .  (reduce by rule 309)
+
+
+
+	.	reduce by rule 309
+
+
+state 2:
+
+	longvidNoEqual : vidNoEqual .  (reduce by rule 324)
+
+
+
+	.	reduce by rule 324
+
+
+state 3:
+
+	longvidEqual : vidEqual .  (reduce by rule 327)
+
+
+
+	.	reduce by rule 327
+
+
+state 4:
+
+	expsAndTopdecs : topdecs .  (reduce by rule 2)
+
+
+
+	.	reduce by rule 2
+
+
+state 5:
+
+	topdec : topdecnode .  (reduce by rule 6)
+
+
+
+	.	reduce by rule 6
+
+
+state 6:
+
+	topdecs : topdec . topdecs 
+
+	ABSTYPE	shift 65
+	DATATYPE	shift 62
+	EXCEPTION	shift 60
+	DO	shift 59
+	FUN	shift 57
+	FUNCTOR	shift 56
+	INFIX	shift 52
+	INFIXR	shift 51
+	LOCAL	shift 47
+	NONFIX	shift 45
+	OPEN	shift 43
+	OVERLOAD	shift 42
+	SEMICOLON	shift 40
+	SIGNATURE	shift 39
+	STRUCTURE	shift 38
+	TYPE	shift 37
+	VAL	shift 36
+	SHOW_BASIS	shift 26
+
+	decnolocal	goto 21
+	fixity	goto 17
+	strdec	goto 8
+	strdecnode	goto 7
+	topdec	goto 6
+	topdecnode	goto 5
+	topdecs	goto 75
+
+	.	reduce by rule 3
+
+
+state 7:
+
+	strdec : strdecnode .  (reduce by rule 14)
+
+
+
+	.	reduce by rule 14
+
+
+state 8:
+
+	topdecnode : strdec .  (reduce by rule 7)
+
+
+
+	.	reduce by rule 7
+
+
+state 9:
+
+	vidNoEqual : shortSymId .  (reduce by rule 319)
+
+
+
+	.	reduce by rule 319
+
+
+state 10:
+
+	vidNoEqual : shortAlphanumId .  (reduce by rule 318)
+
+
+
+	.	reduce by rule 318
+
+
+state 11:
+
+	longvid : longvidNoEqual .  (reduce by rule 328)
+
+
+
+	.	reduce by rule 328
+
+
+state 12:
+
+	longvid : longvidEqual .  (reduce by rule 329)
+
+
+
+	.	reduce by rule 329
+
+
+state 13:
+
+	app_exp : longvid .  (reduce by rule 217)
+	app_exp : longvid . app_exp 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	EQUALOP	shift 61
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 76
+	const	goto 23
+	const'	goto 22
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	reduce by rule 217
+
+
+state 14:
+
+	longvidNoEqual : longSymId .  (reduce by rule 326)
+
+
+
+	.	reduce by rule 326
+
+
+state 15:
+
+	longvidNoEqual : longAlphanumId .  (reduce by rule 325)
+
+
+
+	.	reduce by rule 325
+
+
+state 16:
+
+	const' : int .  (reduce by rule 308)
+
+
+
+	.	reduce by rule 308
+
+
+state 17:
+
+	decnolocal : fixity . vids 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	ASTERISK	shift 64
+	EQUALOP	shift 61
+
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vid	goto 80
+	vidEqual	goto 79
+	vidNoEqual	goto 78
+	vids	goto 77
+
+	.	error
+
+
+state 18:
+
+	program : expsAndTopdecs .  (reduce by rule 0)
+
+
+
+	.	reduce by rule 0
+
+
+state 19:
+
+	exp : expnode .  (reduce by rule 204)
+
+
+
+	.	reduce by rule 204
+
+
+state 20:
+
+	expnode : exp . HANDLE match 
+	expnode : exp . ORELSE exp 
+	expnode : exp . ANDALSO exp 
+	expnode : exp . COLON ty 
+	expsAndTopdecs : exp . SEMICOLON expsAndTopdecs 
+
+	ANDALSO	shift 85
+	COLON	shift 84
+	HANDLE	shift 83
+	ORELSE	shift 82
+	SEMICOLON	shift 81
+
+
+	.	error
+
+
+state 21:
+
+	strdecnode : decnolocal .  (reduce by rule 17)
+
+
+
+	.	reduce by rule 17
+
+
+state 22:
+
+	const : const' .  (reduce by rule 307)
+
+
+
+	.	reduce by rule 307
+
+
+state 23:
+
+	aexp : const .  (reduce by rule 220)
+
+
+
+	.	reduce by rule 220
+
+
+state 24:
+
+	expnode : app_exp .  (reduce by rule 209)
+
+
+
+	.	reduce by rule 209
+
+
+state 25:
+
+	app_exp : aexp .  (reduce by rule 215)
+	app_exp : aexp . app_exp 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	EQUALOP	shift 61
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 86
+	const	goto 23
+	const'	goto 22
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	reduce by rule 215
+
+
+state 26:
+
+	strdecnode : SHOW_BASIS .  (reduce by rule 18)
+
+
+
+	.	reduce by rule 18
+
+
+state 27:
+
+	aexp : PRIM . string COLON ty SEMICOLON 
+
+	STRING	shift 88
+
+	string	goto 87
+
+	.	error
+
+
+state 28:
+
+	aexp : SYMBOL . string symattributes COLON ty SEMICOLON 
+	aexp : SYMBOL . ASTERISK COLON ty SEMICOLON 
+
+	STRING	shift 88
+	ASTERISK	shift 90
+
+	string	goto 89
+
+	.	error
+
+
+state 29:
+
+	aexp : IMPORT . string ieattributes COLON ty SEMICOLON 
+	aexp : IMPORT . ASTERISK ieattributes COLON ty SEMICOLON 
+
+	STRING	shift 88
+	ASTERISK	shift 92
+
+	string	goto 91
+
+	.	error
+
+
+state 30:
+
+	aexp : EXPORT . string ieattributes COLON ty SEMICOLON 
+
+	STRING	shift 88
+
+	string	goto 93
+
+	.	error
+
+
+state 31:
+
+	aexp : ADDRESS . string symattributes COLON ty SEMICOLON 
+
+	STRING	shift 88
+
+	string	goto 94
+
+	.	error
+
+
+state 32:
+
+	aexp : CONST . string COLON ty SEMICOLON 
+
+	STRING	shift 88
+
+	string	goto 95
+
+	.	error
+
+
+state 33:
+
+	aexp : COMMAND_LINE_CONST . string COLON ty EQUALOP constOrBool SEMICOLON 
+
+	STRING	shift 88
+
+	string	goto 96
+
+	.	error
+
+
+state 34:
+
+	aexp : BUILD_CONST . string COLON ty SEMICOLON 
+
+	STRING	shift 88
+
+	string	goto 97
+
+	.	error
+
+
+state 35:
+
+	expnode : WHILE . exp DO exp 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	CASE	shift 63
+	EQUALOP	shift 61
+	FN	shift 58
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	RAISE	shift 41
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	exp	goto 98
+	expnode	goto 19
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 36:
+
+	decnolocal : VAL . valbindTop 
+	decnolocal : VAL . tyvarseq valbindTop 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	TYVAR	shift 118
+	WORD	shift 66
+	ASTERISK	shift 64
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 114
+	OP	shift 113
+	REC	shift 112
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 108
+	const	goto 107
+	const'	goto 22
+	cpat	goto 106
+	cpatnode	goto 105
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	pat	goto 103
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	tyvar	goto 102
+	tyvarseq	goto 101
+	valbind	goto 100
+	valbindTop	goto 99
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 37:
+
+	decnolocal : TYPE . typBind 
+
+	TYVAR	shift 118
+	LPAREN	shift 125
+
+	tb	goto 124
+	tbs	goto 123
+	tbs'	goto 122
+	typBind	goto 121
+	tyvar	goto 102
+	tyvars	goto 120
+	tyvarseq	goto 119
+
+	.	reduce by rule 151
+
+
+state 38:
+
+	strdecnode : STRUCTURE . strbinds 
+
+	SHORTALPHANUMID	shift 72
+
+	shortAlphanumId	goto 128
+	strbinds	goto 127
+	strid	goto 126
+
+	.	error
+
+
+state 39:
+
+	topdecnode : SIGNATURE . sigbinds 
+
+	SHORTALPHANUMID	shift 72
+
+	shortAlphanumId	goto 131
+	sigbinds	goto 130
+	sigid	goto 129
+
+	.	error
+
+
+state 40:
+
+	topdecs : SEMICOLON . expsAndTopdecs 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ABSTYPE	shift 65
+	ASTERISK	shift 64
+	CASE	shift 63
+	DATATYPE	shift 62
+	EQUALOP	shift 61
+	EXCEPTION	shift 60
+	DO	shift 59
+	FN	shift 58
+	FUN	shift 57
+	FUNCTOR	shift 56
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	INFIX	shift 52
+	INFIXR	shift 51
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LOCAL	shift 47
+	LPAREN	shift 46
+	NONFIX	shift 45
+	OP	shift 44
+	OPEN	shift 43
+	OVERLOAD	shift 42
+	RAISE	shift 41
+	SEMICOLON	shift 40
+	SIGNATURE	shift 39
+	STRUCTURE	shift 38
+	TYPE	shift 37
+	VAL	shift 36
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+	SHOW_BASIS	shift 26
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	decnolocal	goto 21
+	exp	goto 20
+	expnode	goto 19
+	expsAndTopdecs	goto 132
+	fixity	goto 17
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	strdec	goto 8
+	strdecnode	goto 7
+	topdec	goto 6
+	topdecnode	goto 5
+	topdecs	goto 4
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	reduce by rule 3
+
+
+state 41:
+
+	expnode : RAISE . exp 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	CASE	shift 63
+	EQUALOP	shift 61
+	FN	shift 58
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	RAISE	shift 41
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	exp	goto 133
+	expnode	goto 19
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 42:
+
+	decnolocal : OVERLOAD . priority vid COLON ty AS longvidands 
+
+	INT	shift 136
+
+	digit	goto 135
+	priority	goto 134
+
+	.	reduce by rule 175
+
+
+state 43:
+
+	decnolocal : OPEN . longstrids 
+
+	SHORTALPHANUMID	shift 72
+	LONGALPHANUMID	shift 70
+
+	longAlphanumId	goto 140
+	longstrid	goto 139
+	longstrids	goto 138
+	shortAlphanumId	goto 128
+	strid	goto 137
+
+	.	error
+
+
+state 44:
+
+	aexp : OP . longvid 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	ASTERISK	shift 64
+	EQUALOP	shift 61
+
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 141
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+
+	.	error
+
+
+state 45:
+
+	fixity : NONFIX .  (reduce by rule 174)
+
+
+
+	.	reduce by rule 174
+
+
+state 46:
+
+	aexp : LPAREN . RPAREN 
+	aexp : LPAREN . exp_ps RPAREN 
+	aexp : LPAREN . exp_2c RPAREN 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	CASE	shift 63
+	EQUALOP	shift 61
+	FN	shift 58
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	RAISE	shift 41
+	RPAREN	shift 145
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	exp	goto 144
+	exp_2c	goto 143
+	exp_ps	goto 142
+	expnode	goto 19
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 47:
+
+	strdecnode : LOCAL . strdecs IN strdecs END 
+
+	ABSTYPE	shift 65
+	DATATYPE	shift 62
+	EXCEPTION	shift 60
+	DO	shift 59
+	FUN	shift 57
+	INFIX	shift 52
+	INFIXR	shift 51
+	LOCAL	shift 47
+	NONFIX	shift 45
+	OPEN	shift 43
+	OVERLOAD	shift 42
+	SEMICOLON	shift 149
+	STRUCTURE	shift 38
+	TYPE	shift 37
+	VAL	shift 36
+	SHOW_BASIS	shift 26
+
+	decnolocal	goto 21
+	fixity	goto 17
+	strdec	goto 148
+	strdecnode	goto 7
+	strdecs	goto 147
+	strdecsnode	goto 146
+
+	.	reduce by rule 11
+
+
+state 48:
+
+	aexp : LET . decs IN exp_ps END 
+
+	ABSTYPE	shift 65
+	DATATYPE	shift 62
+	EXCEPTION	shift 60
+	DO	shift 59
+	FUN	shift 57
+	INFIX	shift 52
+	INFIXR	shift 51
+	LOCAL	shift 155
+	NONFIX	shift 45
+	OPEN	shift 43
+	OVERLOAD	shift 42
+	SEMICOLON	shift 154
+	TYPE	shift 37
+	VAL	shift 36
+
+	dec	goto 153
+	decnode	goto 152
+	decnolocal	goto 151
+	decs	goto 150
+	fixity	goto 17
+
+	.	reduce by rule 111
+
+
+state 49:
+
+	aexp : LBRACKET . exp_list RBRACKET 
+	aexp : LBRACKET . RBRACKET 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	CASE	shift 63
+	EQUALOP	shift 61
+	FN	shift 58
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	RAISE	shift 41
+	RBRACKET	shift 158
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	exp	goto 157
+	exp_list	goto 156
+	expnode	goto 19
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 50:
+
+	aexp : LBRACE . elabels RBRACE 
+	aexp : LBRACE . RBRACE 
+
+	INT	shift 168
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	ASTERISK	shift 167
+	RBRACE	shift 166
+
+	elabel	goto 165
+	elabels	goto 164
+	field	goto 163
+	idField	goto 162
+	numericField	goto 161
+	shortAlphanumId	goto 160
+	shortSymId	goto 159
+
+	.	error
+
+
+state 51:
+
+	fixity : INFIXR .  (reduce by rule 172)
+	fixity : INFIXR . digit 
+
+	INT	shift 136
+
+	digit	goto 169
+
+	.	reduce by rule 172
+
+
+state 52:
+
+	fixity : INFIX .  (reduce by rule 170)
+	fixity : INFIX . digit 
+
+	INT	shift 136
+
+	digit	goto 170
+
+	.	reduce by rule 170
+
+
+state 53:
+
+	expnode : IF . exp THEN exp ELSE exp 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	CASE	shift 63
+	EQUALOP	shift 61
+	FN	shift 58
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	RAISE	shift 41
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	exp	goto 171
+	expnode	goto 19
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 54:
+
+	aexp : HASHLBRACKET . exp_list RBRACKET 
+	aexp : HASHLBRACKET . RBRACKET 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	CASE	shift 63
+	EQUALOP	shift 61
+	FN	shift 58
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	RAISE	shift 41
+	RBRACKET	shift 173
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	exp	goto 157
+	exp_list	goto 172
+	expnode	goto 19
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 55:
+
+	aexp : HASH . field 
+
+	INT	shift 168
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	ASTERISK	shift 167
+
+	field	goto 175
+	idField	goto 174
+	numericField	goto 161
+	shortAlphanumId	goto 160
+	shortSymId	goto 159
+
+	.	error
+
+
+state 56:
+
+	topdecnode : FUNCTOR . funbinds 
+
+	SHORTALPHANUMID	shift 72
+
+	fctid	goto 178
+	funbinds	goto 177
+	shortAlphanumId	goto 176
+
+	.	error
+
+
+state 57:
+
+	decnolocal : FUN . funs 
+	decnolocal : FUN . tyvarseq funs 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	TYVAR	shift 118
+	WORD	shift 66
+	ASTERISK	shift 64
+	BAR	shift 186
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 114
+	OP	shift 113
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 185
+	clause	goto 184
+	clauses	goto 183
+	clausesTop	goto 182
+	const	goto 107
+	const'	goto 22
+	funs	goto 181
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	optbar'	goto 180
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	tyvar	goto 102
+	tyvarseq	goto 179
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 58:
+
+	expnode : FN . match 
+
+	BAR	shift 186
+
+	match	goto 189
+	optbar	goto 188
+	optbar'	goto 187
+
+	.	reduce by rule 300
+
+
+state 59:
+
+	decnolocal : DO . exp 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	CASE	shift 63
+	EQUALOP	shift 61
+	FN	shift 58
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	RAISE	shift 41
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	exp	goto 190
+	expnode	goto 19
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 60:
+
+	decnolocal : EXCEPTION . ebs 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	ASTERISK	shift 64
+	EQUALOP	shift 61
+	OP	shift 196
+
+	con	goto 195
+	eb	goto 194
+	ebs	goto 193
+	opcon	goto 192
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vid	goto 191
+	vidEqual	goto 79
+	vidNoEqual	goto 78
+
+	.	error
+
+
+state 61:
+
+	vidEqual : EQUALOP .  (reduce by rule 321)
+
+
+
+	.	reduce by rule 321
+
+
+state 62:
+
+	decnolocal : DATATYPE . datatypeRhs 
+
+	TYVAR	shift 118
+	LPAREN	shift 125
+
+	datBind	goto 204
+	datatypeRhs	goto 203
+	datatypeRhsnode	goto 202
+	db	goto 201
+	dbs	goto 200
+	dbs'	goto 199
+	repl	goto 198
+	tyvar	goto 102
+	tyvars	goto 197
+	tyvarseq	goto 119
+
+	.	reduce by rule 151
+
+
+state 63:
+
+	expnode : CASE . exp OF match 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	CASE	shift 63
+	EQUALOP	shift 61
+	FN	shift 58
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	RAISE	shift 41
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	exp	goto 205
+	expnode	goto 19
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 64:
+
+	vidNoEqual : ASTERISK .  (reduce by rule 320)
+
+
+
+	.	reduce by rule 320
+
+
+state 65:
+
+	decnolocal : ABSTYPE . datBind WITH decs END 
+
+	TYVAR	shift 118
+	LPAREN	shift 125
+
+	datBind	goto 207
+	db	goto 201
+	dbs	goto 200
+	dbs'	goto 199
+	tyvar	goto 102
+	tyvars	goto 206
+	tyvarseq	goto 119
+
+	.	reduce by rule 151
+
+
+state 66:
+
+	word : WORD .  (reduce by rule 178)
+
+
+
+	.	reduce by rule 178
+
+
+state 67:
+
+	const' : STRING .  (reduce by rule 311)
+
+
+
+	.	reduce by rule 311
+
+
+state 68:
+
+	const' : REAL .  (reduce by rule 310)
+
+
+
+	.	reduce by rule 310
+
+
+state 69:
+
+	longSymId : LONGSYMID .  (reduce by rule 317)
+
+
+
+	.	reduce by rule 317
+
+
+state 70:
+
+	longAlphanumId : LONGALPHANUMID .  (reduce by rule 316)
+
+
+
+	.	reduce by rule 316
+
+
+state 71:
+
+	shortSymId : SHORTSYMID .  (reduce by rule 315)
+
+
+
+	.	reduce by rule 315
+
+
+state 72:
+
+	shortAlphanumId : SHORTALPHANUMID .  (reduce by rule 314)
+
+
+
+	.	reduce by rule 314
+
+
+state 73:
+
+	int : INT .  (reduce by rule 177)
+
+
+
+	.	reduce by rule 177
+
+
+state 74:
+
+	const' : CHAR .  (reduce by rule 312)
+
+
+
+	.	reduce by rule 312
+
+
+state 75:
+
+	topdecs : topdec topdecs .  (reduce by rule 4)
+
+
+
+	.	reduce by rule 4
+
+
+state 76:
+
+	app_exp : longvid app_exp .  (reduce by rule 218)
+
+
+
+	.	reduce by rule 218
+
+
+state 77:
+
+	decnolocal : fixity vids .  (reduce by rule 127)
+
+
+
+	.	reduce by rule 127
+
+
+state 78:
+
+	vid : vidNoEqual .  (reduce by rule 322)
+
+
+
+	.	reduce by rule 322
+
+
+state 79:
+
+	vid : vidEqual .  (reduce by rule 323)
+
+
+
+	.	reduce by rule 323
+
+
+state 80:
+
+	vids : vid .  (reduce by rule 347)
+	vids : vid . vids 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	ASTERISK	shift 64
+	EQUALOP	shift 61
+
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vid	goto 80
+	vidEqual	goto 79
+	vidNoEqual	goto 78
+	vids	goto 208
+
+	.	reduce by rule 347
+
+
+state 81:
+
+	expsAndTopdecs : exp SEMICOLON . expsAndTopdecs 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ABSTYPE	shift 65
+	ASTERISK	shift 64
+	CASE	shift 63
+	DATATYPE	shift 62
+	EQUALOP	shift 61
+	EXCEPTION	shift 60
+	DO	shift 59
+	FN	shift 58
+	FUN	shift 57
+	FUNCTOR	shift 56
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	INFIX	shift 52
+	INFIXR	shift 51
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LOCAL	shift 47
+	LPAREN	shift 46
+	NONFIX	shift 45
+	OP	shift 44
+	OPEN	shift 43
+	OVERLOAD	shift 42
+	RAISE	shift 41
+	SEMICOLON	shift 40
+	SIGNATURE	shift 39
+	STRUCTURE	shift 38
+	TYPE	shift 37
+	VAL	shift 36
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+	SHOW_BASIS	shift 26
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	decnolocal	goto 21
+	exp	goto 20
+	expnode	goto 19
+	expsAndTopdecs	goto 209
+	fixity	goto 17
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	strdec	goto 8
+	strdecnode	goto 7
+	topdec	goto 6
+	topdecnode	goto 5
+	topdecs	goto 4
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	reduce by rule 3
+
+
+state 82:
+
+	expnode : exp ORELSE . exp 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	CASE	shift 63
+	EQUALOP	shift 61
+	FN	shift 58
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	RAISE	shift 41
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	exp	goto 210
+	expnode	goto 19
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 83:
+
+	expnode : exp HANDLE . match 
+
+	BAR	shift 186
+
+	match	goto 211
+	optbar	goto 188
+	optbar'	goto 187
+
+	.	reduce by rule 300
+
+
+state 84:
+
+	expnode : exp COLON . ty 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 217
+	ty'	goto 216
+	ty'node	goto 215
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 85:
+
+	expnode : exp ANDALSO . exp 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	CASE	shift 63
+	EQUALOP	shift 61
+	FN	shift 58
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	RAISE	shift 41
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	exp	goto 225
+	expnode	goto 19
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 86:
+
+	app_exp : aexp app_exp .  (reduce by rule 216)
+
+
+
+	.	reduce by rule 216
+
+
+state 87:
+
+	aexp : PRIM string . COLON ty SEMICOLON 
+
+	COLON	shift 226
+
+
+	.	error
+
+
+state 88:
+
+	string : STRING .  (reduce by rule 313)
+
+
+
+	.	reduce by rule 313
+
+
+state 89:
+
+	aexp : SYMBOL string . symattributes COLON ty SEMICOLON 
+
+	SHORTALPHANUMID	shift 72
+
+	shortAlphanumId	goto 228
+	symattributes	goto 227
+
+	.	reduce by rule 244
+
+
+state 90:
+
+	aexp : SYMBOL ASTERISK . COLON ty SEMICOLON 
+
+	COLON	shift 229
+
+
+	.	error
+
+
+state 91:
+
+	aexp : IMPORT string . ieattributes COLON ty SEMICOLON 
+
+	SHORTALPHANUMID	shift 72
+
+	ieattributes	goto 231
+	shortAlphanumId	goto 230
+
+	.	reduce by rule 242
+
+
+state 92:
+
+	aexp : IMPORT ASTERISK . ieattributes COLON ty SEMICOLON 
+
+	SHORTALPHANUMID	shift 72
+
+	ieattributes	goto 232
+	shortAlphanumId	goto 230
+
+	.	reduce by rule 242
+
+
+state 93:
+
+	aexp : EXPORT string . ieattributes COLON ty SEMICOLON 
+
+	SHORTALPHANUMID	shift 72
+
+	ieattributes	goto 233
+	shortAlphanumId	goto 230
+
+	.	reduce by rule 242
+
+
+state 94:
+
+	aexp : ADDRESS string . symattributes COLON ty SEMICOLON 
+
+	SHORTALPHANUMID	shift 72
+
+	shortAlphanumId	goto 228
+	symattributes	goto 234
+
+	.	reduce by rule 244
+
+
+state 95:
+
+	aexp : CONST string . COLON ty SEMICOLON 
+
+	COLON	shift 235
+
+
+	.	error
+
+
+state 96:
+
+	aexp : COMMAND_LINE_CONST string . COLON ty EQUALOP constOrBool SEMICOLON 
+
+	COLON	shift 236
+
+
+	.	error
+
+
+state 97:
+
+	aexp : BUILD_CONST string . COLON ty SEMICOLON 
+
+	COLON	shift 237
+
+
+	.	error
+
+
+state 98:
+
+	expnode : exp . HANDLE match 
+	expnode : exp . ORELSE exp 
+	expnode : exp . ANDALSO exp 
+	expnode : exp . COLON ty 
+	expnode : WHILE exp . DO exp 
+
+	ANDALSO	shift 85
+	COLON	shift 84
+	DO	shift 238
+	HANDLE	shift 83
+	ORELSE	shift 82
+
+
+	.	error
+
+
+state 99:
+
+	decnolocal : VAL valbindTop .  (reduce by rule 117)
+
+
+
+	.	reduce by rule 117
+
+
+state 100:
+
+	valbindTop : valbind .  (reduce by rule 129)
+
+
+
+	.	reduce by rule 129
+
+
+state 101:
+
+	decnolocal : VAL tyvarseq . valbindTop 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 240
+	OP	shift 113
+	REC	shift 112
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 108
+	const	goto 107
+	const'	goto 22
+	cpat	goto 106
+	cpatnode	goto 105
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	pat	goto 103
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	valbind	goto 100
+	valbindTop	goto 239
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 102:
+
+	tyvarseq : tyvar .  (reduce by rule 152)
+
+
+
+	.	reduce by rule 152
+
+
+state 103:
+
+	valbind : pat . EQUALOP exp 
+	valbind : pat . EQUALOP exp AND valbind 
+
+	EQUALOP	shift 241
+
+
+	.	error
+
+
+state 104:
+
+	apatnode : longvidNoEqual .  (reduce by rule 259)
+
+
+
+	.	reduce by rule 259
+
+
+state 105:
+
+	cpat : cpatnode .  (reduce by rule 252)
+
+
+
+	.	reduce by rule 252
+
+
+state 106:
+
+	cpatnode : cpat . AS cpat 
+	cpatnode : cpat . COLON ty 
+	pat : cpat . BAR barcpats 
+	pat : cpat .  (reduce by rule 251)
+
+	AS	shift 244
+	BAR	shift 243
+	COLON	shift 242
+
+
+	.	reduce by rule 251
+
+
+state 107:
+
+	apatnode : const .  (reduce by rule 261)
+
+
+
+	.	reduce by rule 261
+
+
+state 108:
+
+	cpatnode : apats .  (reduce by rule 255)
+
+
+
+	.	reduce by rule 255
+
+
+state 109:
+
+	apat : apatnode .  (reduce by rule 258)
+
+
+
+	.	reduce by rule 258
+
+
+state 110:
+
+	apats : apat .  (reduce by rule 256)
+	apats : apat . apats 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 240
+	OP	shift 113
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 245
+	const	goto 107
+	const'	goto 22
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	reduce by rule 256
+
+
+state 111:
+
+	apatnode : WILD .  (reduce by rule 262)
+
+
+
+	.	reduce by rule 262
+
+
+state 112:
+
+	valbind : REC . rvalbind 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 240
+	OP	shift 113
+	REC	shift 248
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 108
+	const	goto 107
+	const'	goto 22
+	cpat	goto 106
+	cpatnode	goto 105
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	pat	goto 247
+	rvalbind	goto 246
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 113:
+
+	apatnode : OP . longvid 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	ASTERISK	shift 64
+	EQUALOP	shift 61
+
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 249
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+
+	.	error
+
+
+state 114:
+
+	apatnode : LPAREN . pats RPAREN 
+	tyvarseq : LPAREN . tyvar_pc RPAREN 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	TYVAR	shift 118
+	WORD	shift 66
+	ASTERISK	shift 64
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 240
+	OP	shift 113
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 108
+	const	goto 107
+	const'	goto 22
+	cpat	goto 106
+	cpatnode	goto 105
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	pat	goto 253
+	pats	goto 252
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	tyvar	goto 251
+	tyvar_pc	goto 250
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	reduce by rule 268
+
+
+state 115:
+
+	apatnode : LBRACKET . pats RBRACKET 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 240
+	OP	shift 113
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 108
+	const	goto 107
+	const'	goto 22
+	cpat	goto 106
+	cpatnode	goto 105
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	pat	goto 253
+	pats	goto 254
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	reduce by rule 268
+
+
+state 116:
+
+	apatnode : LBRACE . RBRACE 
+	apatnode : LBRACE . patitems RBRACE 
+
+	INT	shift 168
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	ASTERISK	shift 263
+	DOTDOTDOT	shift 262
+	EQUALOP	shift 61
+	RBRACE	shift 261
+
+	field	goto 260
+	idField	goto 174
+	numericField	goto 161
+	patitem	goto 259
+	patitems	goto 258
+	shortAlphanumId	goto 257
+	shortSymId	goto 256
+	vid	goto 255
+	vidEqual	goto 79
+	vidNoEqual	goto 78
+
+	.	error
+
+
+state 117:
+
+	apatnode : HASHLBRACKET . pats RBRACKET 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 240
+	OP	shift 113
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 108
+	const	goto 107
+	const'	goto 22
+	cpat	goto 106
+	cpatnode	goto 105
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	pat	goto 253
+	pats	goto 264
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	reduce by rule 268
+
+
+state 118:
+
+	tyvar : TYVAR .  (reduce by rule 332)
+
+
+
+	.	reduce by rule 332
+
+
+state 119:
+
+	tyvars : tyvarseq .  (reduce by rule 150)
+
+
+
+	.	reduce by rule 150
+
+
+state 120:
+
+	tb : tyvars . tycon EQUALOP ty 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tycon	goto 265
+
+	.	error
+
+
+state 121:
+
+	decnolocal : TYPE typBind .  (reduce by rule 122)
+
+
+
+	.	reduce by rule 122
+
+
+state 122:
+
+	tbs : tbs' .  (reduce by rule 146)
+
+
+
+	.	reduce by rule 146
+
+
+state 123:
+
+	typBind : tbs .  (reduce by rule 145)
+
+
+
+	.	reduce by rule 145
+
+
+state 124:
+
+	tbs' : tb .  (reduce by rule 147)
+	tbs' : tb . AND tbs' 
+
+	AND	shift 266
+
+
+	.	reduce by rule 147
+
+
+state 125:
+
+	tyvarseq : LPAREN . tyvar_pc RPAREN 
+
+	TYVAR	shift 118
+
+	tyvar	goto 251
+	tyvar_pc	goto 250
+
+	.	error
+
+
+state 126:
+
+	strbinds : strid . sigconst EQUALOP strbinds' 
+
+	COLON	shift 269
+	COLONGT	shift 268
+
+	sigconst	goto 267
+
+	.	reduce by rule 60
+
+
+state 127:
+
+	strdecnode : STRUCTURE strbinds .  (reduce by rule 15)
+
+
+
+	.	reduce by rule 15
+
+
+state 128:
+
+	strid : shortAlphanumId .  (reduce by rule 342)
+
+
+
+	.	reduce by rule 342
+
+
+state 129:
+
+	sigbinds : sigid . EQUALOP sigexp' sigbinds' 
+
+	EQUALOP	shift 270
+
+
+	.	error
+
+
+state 130:
+
+	topdecnode : SIGNATURE sigbinds .  (reduce by rule 8)
+
+
+
+	.	reduce by rule 8
+
+
+state 131:
+
+	sigid : shortAlphanumId .  (reduce by rule 345)
+
+
+
+	.	reduce by rule 345
+
+
+state 132:
+
+	topdecs : SEMICOLON expsAndTopdecs .  (reduce by rule 5)
+
+
+
+	.	reduce by rule 5
+
+
+state 133:
+
+	expnode : exp . HANDLE match 
+	expnode : exp . ORELSE exp 
+	expnode : exp . ANDALSO exp 
+	expnode : exp . COLON ty 
+	expnode : RAISE exp .  (reduce by rule 214)
+
+	ANDALSO	shift 85
+	COLON	shift 84
+	HANDLE	shift 83
+	ORELSE	shift 82
+
+
+	.	reduce by rule 214
+
+
+state 134:
+
+	decnolocal : OVERLOAD priority . vid COLON ty AS longvidands 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	ASTERISK	shift 64
+	EQUALOP	shift 61
+
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vid	goto 271
+	vidEqual	goto 79
+	vidNoEqual	goto 78
+
+	.	error
+
+
+state 135:
+
+	priority : digit .  (reduce by rule 176)
+
+
+
+	.	reduce by rule 176
+
+
+state 136:
+
+	digit : INT .  (reduce by rule 179)
+
+
+
+	.	reduce by rule 179
+
+
+state 137:
+
+	longstrid : strid .  (reduce by rule 343)
+
+
+
+	.	reduce by rule 343
+
+
+state 138:
+
+	decnolocal : OPEN longstrids .  (reduce by rule 126)
+
+
+
+	.	reduce by rule 126
+
+
+state 139:
+
+	longstrids : longstrid .  (reduce by rule 351)
+	longstrids : longstrid . longstrids 
+
+	SHORTALPHANUMID	shift 72
+	LONGALPHANUMID	shift 70
+
+	longAlphanumId	goto 140
+	longstrid	goto 139
+	longstrids	goto 272
+	shortAlphanumId	goto 128
+	strid	goto 137
+
+	.	reduce by rule 351
+
+
+state 140:
+
+	longstrid : longAlphanumId .  (reduce by rule 344)
+
+
+
+	.	reduce by rule 344
+
+
+state 141:
+
+	aexp : OP longvid .  (reduce by rule 219)
+
+
+
+	.	reduce by rule 219
+
+
+state 142:
+
+	aexp : LPAREN exp_ps . RPAREN 
+
+	RPAREN	shift 273
+
+
+	.	error
+
+
+state 143:
+
+	aexp : LPAREN exp_2c . RPAREN 
+
+	RPAREN	shift 274
+
+
+	.	error
+
+
+state 144:
+
+	exp_2c : exp . COMMA exp_2c 
+	exp_2c : exp . COMMA exp 
+	exp_ps : exp . optsemicolon 
+	exp_ps : exp . SEMICOLON exp_ps 
+	expnode : exp . HANDLE match 
+	expnode : exp . ORELSE exp 
+	expnode : exp . ANDALSO exp 
+	expnode : exp . COLON ty 
+
+	ANDALSO	shift 85
+	COLON	shift 84
+	COMMA	shift 277
+	HANDLE	shift 83
+	ORELSE	shift 82
+	SEMICOLON	shift 276
+
+	optsemicolon	goto 275
+
+	.	reduce by rule 303
+
+
+state 145:
+
+	aexp : LPAREN RPAREN .  (reduce by rule 226)
+
+
+
+	.	reduce by rule 226
+
+
+state 146:
+
+	strdecs : strdecsnode .  (reduce by rule 10)
+
+
+
+	.	reduce by rule 10
+
+
+state 147:
+
+	strdecnode : LOCAL strdecs . IN strdecs END 
+
+	IN	shift 278
+
+
+	.	error
+
+
+state 148:
+
+	strdecsnode : strdec . strdecs 
+
+	ABSTYPE	shift 65
+	DATATYPE	shift 62
+	EXCEPTION	shift 60
+	DO	shift 59
+	FUN	shift 57
+	INFIX	shift 52
+	INFIXR	shift 51
+	LOCAL	shift 47
+	NONFIX	shift 45
+	OPEN	shift 43
+	OVERLOAD	shift 42
+	SEMICOLON	shift 149
+	STRUCTURE	shift 38
+	TYPE	shift 37
+	VAL	shift 36
+	SHOW_BASIS	shift 26
+
+	decnolocal	goto 21
+	fixity	goto 17
+	strdec	goto 148
+	strdecnode	goto 7
+	strdecs	goto 279
+	strdecsnode	goto 146
+
+	.	reduce by rule 11
+
+
+state 149:
+
+	strdecsnode : SEMICOLON . strdecs 
+
+	ABSTYPE	shift 65
+	DATATYPE	shift 62
+	EXCEPTION	shift 60
+	DO	shift 59
+	FUN	shift 57
+	INFIX	shift 52
+	INFIXR	shift 51
+	LOCAL	shift 47
+	NONFIX	shift 45
+	OPEN	shift 43
+	OVERLOAD	shift 42
+	SEMICOLON	shift 149
+	STRUCTURE	shift 38
+	TYPE	shift 37
+	VAL	shift 36
+	SHOW_BASIS	shift 26
+
+	decnolocal	goto 21
+	fixity	goto 17
+	strdec	goto 148
+	strdecnode	goto 7
+	strdecs	goto 280
+	strdecsnode	goto 146
+
+	.	reduce by rule 11
+
+
+state 150:
+
+	aexp : LET decs . IN exp_ps END 
+
+	IN	shift 281
+
+
+	.	error
+
+
+state 151:
+
+	decnode : decnolocal .  (reduce by rule 115)
+
+
+
+	.	reduce by rule 115
+
+
+state 152:
+
+	dec : decnode .  (reduce by rule 114)
+
+
+
+	.	reduce by rule 114
+
+
+state 153:
+
+	decs : dec . decs 
+
+	ABSTYPE	shift 65
+	DATATYPE	shift 62
+	EXCEPTION	shift 60
+	DO	shift 59
+	FUN	shift 57
+	INFIX	shift 52
+	INFIXR	shift 51
+	LOCAL	shift 155
+	NONFIX	shift 45
+	OPEN	shift 43
+	OVERLOAD	shift 42
+	SEMICOLON	shift 154
+	TYPE	shift 37
+	VAL	shift 36
+
+	dec	goto 153
+	decnode	goto 152
+	decnolocal	goto 151
+	decs	goto 282
+	fixity	goto 17
+
+	.	reduce by rule 111
+
+
+state 154:
+
+	decs : SEMICOLON . decs 
+
+	ABSTYPE	shift 65
+	DATATYPE	shift 62
+	EXCEPTION	shift 60
+	DO	shift 59
+	FUN	shift 57
+	INFIX	shift 52
+	INFIXR	shift 51
+	LOCAL	shift 155
+	NONFIX	shift 45
+	OPEN	shift 43
+	OVERLOAD	shift 42
+	SEMICOLON	shift 154
+	TYPE	shift 37
+	VAL	shift 36
+
+	dec	goto 153
+	decnode	goto 152
+	decnolocal	goto 151
+	decs	goto 283
+	fixity	goto 17
+
+	.	reduce by rule 111
+
+
+state 155:
+
+	decnode : LOCAL . decs IN decs END 
+
+	ABSTYPE	shift 65
+	DATATYPE	shift 62
+	EXCEPTION	shift 60
+	DO	shift 59
+	FUN	shift 57
+	INFIX	shift 52
+	INFIXR	shift 51
+	LOCAL	shift 155
+	NONFIX	shift 45
+	OPEN	shift 43
+	OVERLOAD	shift 42
+	SEMICOLON	shift 154
+	TYPE	shift 37
+	VAL	shift 36
+
+	dec	goto 153
+	decnode	goto 152
+	decnolocal	goto 151
+	decs	goto 284
+	fixity	goto 17
+
+	.	reduce by rule 111
+
+
+state 156:
+
+	aexp : LBRACKET exp_list . RBRACKET 
+
+	RBRACKET	shift 285
+
+
+	.	error
+
+
+state 157:
+
+	exp_list : exp .  (reduce by rule 248)
+	exp_list : exp . COMMA exp_list 
+	expnode : exp . HANDLE match 
+	expnode : exp . ORELSE exp 
+	expnode : exp . ANDALSO exp 
+	expnode : exp . COLON ty 
+
+	ANDALSO	shift 85
+	COLON	shift 84
+	COMMA	shift 286
+	HANDLE	shift 83
+	ORELSE	shift 82
+
+
+	.	reduce by rule 248
+
+
+state 158:
+
+	aexp : LBRACKET RBRACKET .  (reduce by rule 230)
+
+
+
+	.	reduce by rule 230
+
+
+state 159:
+
+	idField : shortSymId .  (reduce by rule 338)
+
+
+
+	.	reduce by rule 338
+
+
+state 160:
+
+	idField : shortAlphanumId .  (reduce by rule 337)
+
+
+
+	.	reduce by rule 337
+
+
+state 161:
+
+	field : numericField .  (reduce by rule 341)
+
+
+
+	.	reduce by rule 341
+
+
+state 162:
+
+	elabel : idField . constraint 
+	field : idField .  (reduce by rule 340)
+
+	COLON	shift 288
+	COMMA	reduce by rule 136
+	EQUALOP	reduce by rule 340
+	RBRACE	reduce by rule 136
+
+	constraint	goto 287
+
+	.	error
+
+
+state 163:
+
+	elabel : field . EQUALOP exp 
+
+	EQUALOP	shift 289
+
+
+	.	error
+
+
+state 164:
+
+	aexp : LBRACE elabels . RBRACE 
+
+	RBRACE	shift 290
+
+
+	.	error
+
+
+state 165:
+
+	elabels : elabel . COMMA elabels 
+	elabels : elabel .  (reduce by rule 201)
+
+	COMMA	shift 291
+
+
+	.	reduce by rule 201
+
+
+state 166:
+
+	aexp : LBRACE RBRACE .  (reduce by rule 225)
+
+
+
+	.	reduce by rule 225
+
+
+state 167:
+
+	idField : ASTERISK .  (reduce by rule 339)
+
+
+
+	.	reduce by rule 339
+
+
+state 168:
+
+	numericField : INT .  (reduce by rule 180)
+
+
+
+	.	reduce by rule 180
+
+
+state 169:
+
+	fixity : INFIXR digit .  (reduce by rule 173)
+
+
+
+	.	reduce by rule 173
+
+
+state 170:
+
+	fixity : INFIX digit .  (reduce by rule 171)
+
+
+
+	.	reduce by rule 171
+
+
+state 171:
+
+	expnode : exp . HANDLE match 
+	expnode : exp . ORELSE exp 
+	expnode : exp . ANDALSO exp 
+	expnode : exp . COLON ty 
+	expnode : IF exp . THEN exp ELSE exp 
+
+	ANDALSO	shift 85
+	COLON	shift 84
+	HANDLE	shift 83
+	ORELSE	shift 82
+	THEN	shift 292
+
+
+	.	error
+
+
+state 172:
+
+	aexp : HASHLBRACKET exp_list . RBRACKET 
+
+	RBRACKET	shift 293
+
+
+	.	error
+
+
+state 173:
+
+	aexp : HASHLBRACKET RBRACKET .  (reduce by rule 223)
+
+
+
+	.	reduce by rule 223
+
+
+state 174:
+
+	field : idField .  (reduce by rule 340)
+
+
+
+	.	reduce by rule 340
+
+
+state 175:
+
+	aexp : HASH field .  (reduce by rule 221)
+
+
+
+	.	reduce by rule 221
+
+
+state 176:
+
+	fctid : shortAlphanumId .  (reduce by rule 346)
+
+
+
+	.	reduce by rule 346
+
+
+state 177:
+
+	topdecnode : FUNCTOR funbinds .  (reduce by rule 9)
+
+
+
+	.	reduce by rule 9
+
+
+state 178:
+
+	funbinds : fctid . LPAREN fctarg RPAREN sigconst EQUALOP funbinds' 
+
+	LPAREN	shift 294
+
+
+	.	error
+
+
+state 179:
+
+	decnolocal : FUN tyvarseq . funs 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	BAR	shift 186
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 240
+	OP	shift 113
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 185
+	clause	goto 184
+	clauses	goto 183
+	clausesTop	goto 182
+	const	goto 107
+	const'	goto 22
+	funs	goto 295
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	optbar'	goto 180
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 180:
+
+	clausesTop : optbar' . clauses 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 240
+	OP	shift 113
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 185
+	clause	goto 184
+	clauses	goto 296
+	const	goto 107
+	const'	goto 22
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 181:
+
+	decnolocal : FUN funs .  (reduce by rule 120)
+
+
+
+	.	reduce by rule 120
+
+
+state 182:
+
+	funs : clausesTop .  (reduce by rule 138)
+	funs : clausesTop . AND funs 
+
+	AND	shift 297
+
+
+	.	reduce by rule 138
+
+
+state 183:
+
+	clausesTop : clauses .  (reduce by rule 140)
+
+
+
+	.	reduce by rule 140
+
+
+state 184:
+
+	clauses : clause .  (reduce by rule 142)
+	clauses : clause . BAR clauses 
+
+	BAR	shift 298
+
+
+	.	reduce by rule 142
+
+
+state 185:
+
+	clause : apats . constraint EQUALOP exp 
+
+	COLON	shift 288
+
+	constraint	goto 299
+
+	.	reduce by rule 136
+
+
+state 186:
+
+	optbar' : BAR .  (reduce by rule 302)
+
+
+
+	.	reduce by rule 302
+
+
+state 187:
+
+	optbar : optbar' .  (reduce by rule 301)
+
+
+
+	.	reduce by rule 301
+
+
+state 188:
+
+	match : optbar . rules 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 240
+	OP	shift 113
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 108
+	const	goto 107
+	const'	goto 22
+	cpat	goto 106
+	cpatnode	goto 105
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	pat	goto 302
+	rule	goto 301
+	rules	goto 300
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 189:
+
+	expnode : FN match .  (reduce by rule 210)
+
+
+
+	.	reduce by rule 210
+
+
+state 190:
+
+	decnolocal : DO exp .  (reduce by rule 119)
+	expnode : exp . HANDLE match 
+	expnode : exp . ORELSE exp 
+	expnode : exp . ANDALSO exp 
+	expnode : exp . COLON ty 
+
+	ANDALSO	shift 85
+	COLON	shift 84
+	HANDLE	shift 83
+	ORELSE	shift 82
+
+
+	.	reduce by rule 119
+
+
+state 191:
+
+	con : vid .  (reduce by rule 330)
+
+
+
+	.	reduce by rule 330
+
+
+state 192:
+
+	eb : opcon . ebrhs 
+
+	EQUALOP	shift 306
+	OF	shift 305
+
+	ebrhs	goto 304
+	ebrhsnode	goto 303
+
+	.	reduce by rule 166
+
+
+state 193:
+
+	decnolocal : EXCEPTION ebs .  (reduce by rule 125)
+
+
+
+	.	reduce by rule 125
+
+
+state 194:
+
+	ebs : eb .  (reduce by rule 162)
+	ebs : eb . AND ebs 
+
+	AND	shift 307
+
+
+	.	reduce by rule 162
+
+
+state 195:
+
+	opcon : con .  (reduce by rule 160)
+
+
+
+	.	reduce by rule 160
+
+
+state 196:
+
+	opcon : OP . con 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	ASTERISK	shift 64
+	EQUALOP	shift 61
+
+	con	goto 308
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vid	goto 191
+	vidEqual	goto 79
+	vidNoEqual	goto 78
+
+	.	error
+
+
+state 197:
+
+	db : tyvars . tycon EQUALOP optbar constrs 
+	repl : tyvars . tycon EQUALOP DATATYPE longtycon 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tycon	goto 309
+
+	.	error
+
+
+state 198:
+
+	datatypeRhsnode : repl .  (reduce by rule 182)
+
+
+
+	.	reduce by rule 182
+
+
+state 199:
+
+	dbs : dbs' .  (reduce by rule 187)
+
+
+
+	.	reduce by rule 187
+
+
+state 200:
+
+	datBind : dbs .  (reduce by rule 185)
+	datBind : dbs . withtypes 
+
+	WITHTYPE	shift 311
+
+	withtypes	goto 310
+
+	.	reduce by rule 185
+
+
+state 201:
+
+	dbs' : db .  (reduce by rule 188)
+	dbs' : db . AND dbs' 
+
+	AND	shift 312
+
+
+	.	reduce by rule 188
+
+
+state 202:
+
+	datatypeRhs : datatypeRhsnode .  (reduce by rule 181)
+
+
+
+	.	reduce by rule 181
+
+
+state 203:
+
+	decnolocal : DATATYPE datatypeRhs .  (reduce by rule 123)
+
+
+
+	.	reduce by rule 123
+
+
+state 204:
+
+	datatypeRhsnode : datBind .  (reduce by rule 183)
+
+
+
+	.	reduce by rule 183
+
+
+state 205:
+
+	expnode : exp . HANDLE match 
+	expnode : exp . ORELSE exp 
+	expnode : exp . ANDALSO exp 
+	expnode : exp . COLON ty 
+	expnode : CASE exp . OF match 
+
+	ANDALSO	shift 85
+	COLON	shift 84
+	HANDLE	shift 83
+	ORELSE	shift 82
+	OF	shift 313
+
+
+	.	error
+
+
+state 206:
+
+	db : tyvars . tycon EQUALOP optbar constrs 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tycon	goto 314
+
+	.	error
+
+
+state 207:
+
+	decnolocal : ABSTYPE datBind . WITH decs END 
+
+	WITH	shift 315
+
+
+	.	error
+
+
+state 208:
+
+	vids : vid vids .  (reduce by rule 348)
+
+
+
+	.	reduce by rule 348
+
+
+state 209:
+
+	expsAndTopdecs : exp SEMICOLON expsAndTopdecs .  (reduce by rule 1)
+
+
+
+	.	reduce by rule 1
+
+
+state 210:
+
+	expnode : exp . HANDLE match 
+	expnode : exp . ORELSE exp 
+	expnode : exp ORELSE exp .  (reduce by rule 206)
+	expnode : exp . ANDALSO exp 
+	expnode : exp . COLON ty 
+
+	ANDALSO	shift 85
+	COLON	shift 84
+
+
+	.	reduce by rule 206
+
+
+state 211:
+
+	expnode : exp HANDLE match .  (reduce by rule 205)
+
+
+
+	.	reduce by rule 205
+
+
+state 212:
+
+	ty'node : tyvar .  (reduce by rule 286)
+
+
+
+	.	reduce by rule 286
+
+
+state 213:
+
+	ty : tynode .  (reduce by rule 281)
+
+
+
+	.	reduce by rule 281
+
+
+state 214:
+
+	longtycon : tycon .  (reduce by rule 335)
+
+
+
+	.	reduce by rule 335
+
+
+state 215:
+
+	ty' : ty'node .  (reduce by rule 285)
+	tynode : ty'node .  (reduce by rule 284)
+
+	SHORTALPHANUMID	reduce by rule 285
+	SHORTSYMID	reduce by rule 285
+	LONGALPHANUMID	reduce by rule 285
+	ABSTYPE	reduce by rule 284
+	AND	reduce by rule 284
+	ANDALSO	reduce by rule 284
+	ARROW	reduce by rule 284
+	AS	reduce by rule 284
+	ASTERISK	reduce by rule 285
+	BAR	reduce by rule 284
+	COLON	reduce by rule 284
+	COLONGT	reduce by rule 284
+	COMMA	reduce by rule 284
+	DATATYPE	reduce by rule 284
+	ELSE	reduce by rule 284
+	END	reduce by rule 284
+	EOF	reduce by rule 284
+	EQUALOP	reduce by rule 284
+	EQTYPE	reduce by rule 284
+	EXCEPTION	reduce by rule 284
+	DO	reduce by rule 284
+	DARROW	reduce by rule 284
+	FUN	reduce by rule 284
+	FUNCTOR	reduce by rule 284
+	HANDLE	reduce by rule 284
+	IN	reduce by rule 284
+	INCLUDE	reduce by rule 284
+	INFIX	reduce by rule 284
+	INFIXR	reduce by rule 284
+	LOCAL	reduce by rule 284
+	NONFIX	reduce by rule 284
+	ORELSE	reduce by rule 284
+	OF	reduce by rule 284
+	OPEN	reduce by rule 284
+	OVERLOAD	reduce by rule 284
+	RBRACE	reduce by rule 284
+	RBRACKET	reduce by rule 284
+	RPAREN	reduce by rule 284
+	SEMICOLON	reduce by rule 284
+	SHARING	reduce by rule 284
+	SIGNATURE	reduce by rule 284
+	STRUCTURE	reduce by rule 284
+	THEN	reduce by rule 284
+	TYPE	reduce by rule 284
+	VAL	reduce by rule 284
+	WHERE	reduce by rule 284
+	WITH	reduce by rule 284
+	WITHTYPE	reduce by rule 284
+	SHOW_BASIS	reduce by rule 284
+
+
+	.	error
+
+
+state 216:
+
+	tuple_ty : ty' . ASTERISK tuple_ty 
+	tuple_ty : ty' . ASTERISK ty' 
+	ty'node : ty' . longtycon 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	ASTERISK	shift 317
+
+	longAlphanumId	goto 222
+	longtycon	goto 316
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tycon	goto 214
+
+	.	error
+
+
+state 217:
+
+	expnode : exp COLON ty .  (reduce by rule 208)
+	tynode : ty . ARROW ty 
+
+	ARROW	shift 318
+
+
+	.	reduce by rule 208
+
+
+state 218:
+
+	tynode : tuple_ty .  (reduce by rule 282)
+
+
+
+	.	reduce by rule 282
+
+
+state 219:
+
+	tycon : shortSymId .  (reduce by rule 334)
+
+
+
+	.	reduce by rule 334
+
+
+state 220:
+
+	tycon : shortAlphanumId .  (reduce by rule 333)
+
+
+
+	.	reduce by rule 333
+
+
+state 221:
+
+	ty'node : longtycon .  (reduce by rule 292)
+
+
+
+	.	reduce by rule 292
+
+
+state 222:
+
+	longtycon : longAlphanumId .  (reduce by rule 336)
+
+
+
+	.	reduce by rule 336
+
+
+state 223:
+
+	ty'node : LPAREN . ty0_pc RPAREN longtycon 
+	ty'node : LPAREN . ty RPAREN 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 320
+	ty'	goto 216
+	ty'node	goto 215
+	ty0_pc	goto 319
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 224:
+
+	ty'node : LBRACE . tlabels RBRACE 
+	ty'node : LBRACE . RBRACE 
+
+	INT	shift 168
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	ASTERISK	shift 167
+	RBRACE	shift 324
+
+	field	goto 323
+	idField	goto 174
+	numericField	goto 161
+	shortAlphanumId	goto 160
+	shortSymId	goto 159
+	tlabel	goto 322
+	tlabels	goto 321
+
+	.	error
+
+
+state 225:
+
+	expnode : exp . HANDLE match 
+	expnode : exp . ORELSE exp 
+	expnode : exp . ANDALSO exp 
+	expnode : exp ANDALSO exp .  (reduce by rule 207)
+	expnode : exp . COLON ty 
+
+	COLON	shift 84
+
+
+	.	reduce by rule 207
+
+
+state 226:
+
+	aexp : PRIM string COLON . ty SEMICOLON 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 325
+	ty'	goto 216
+	ty'node	goto 215
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 227:
+
+	aexp : SYMBOL string symattributes . COLON ty SEMICOLON 
+
+	COLON	shift 326
+
+
+	.	error
+
+
+state 228:
+
+	symattributes : shortAlphanumId . symattributes 
+
+	SHORTALPHANUMID	shift 72
+
+	shortAlphanumId	goto 228
+	symattributes	goto 327
+
+	.	reduce by rule 244
+
+
+state 229:
+
+	aexp : SYMBOL ASTERISK COLON . ty SEMICOLON 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 328
+	ty'	goto 216
+	ty'node	goto 215
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 230:
+
+	ieattributes : shortAlphanumId . ieattributes 
+
+	SHORTALPHANUMID	shift 72
+
+	ieattributes	goto 329
+	shortAlphanumId	goto 230
+
+	.	reduce by rule 242
+
+
+state 231:
+
+	aexp : IMPORT string ieattributes . COLON ty SEMICOLON 
+
+	COLON	shift 330
+
+
+	.	error
+
+
+state 232:
+
+	aexp : IMPORT ASTERISK ieattributes . COLON ty SEMICOLON 
+
+	COLON	shift 331
+
+
+	.	error
+
+
+state 233:
+
+	aexp : EXPORT string ieattributes . COLON ty SEMICOLON 
+
+	COLON	shift 332
+
+
+	.	error
+
+
+state 234:
+
+	aexp : ADDRESS string symattributes . COLON ty SEMICOLON 
+
+	COLON	shift 333
+
+
+	.	error
+
+
+state 235:
+
+	aexp : CONST string COLON . ty SEMICOLON 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 334
+	ty'	goto 216
+	ty'node	goto 215
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 236:
+
+	aexp : COMMAND_LINE_CONST string COLON . ty EQUALOP constOrBool SEMICOLON 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 335
+	ty'	goto 216
+	ty'node	goto 215
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 237:
+
+	aexp : BUILD_CONST string COLON . ty SEMICOLON 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 336
+	ty'	goto 216
+	ty'node	goto 215
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 238:
+
+	expnode : WHILE exp DO . exp 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	CASE	shift 63
+	EQUALOP	shift 61
+	FN	shift 58
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	RAISE	shift 41
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	exp	goto 337
+	expnode	goto 19
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 239:
+
+	decnolocal : VAL tyvarseq valbindTop .  (reduce by rule 118)
+
+
+
+	.	reduce by rule 118
+
+
+state 240:
+
+	apatnode : LPAREN . pats RPAREN 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 240
+	OP	shift 113
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 108
+	const	goto 107
+	const'	goto 22
+	cpat	goto 106
+	cpatnode	goto 105
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	pat	goto 253
+	pats	goto 252
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	reduce by rule 268
+
+
+state 241:
+
+	valbind : pat EQUALOP . exp 
+	valbind : pat EQUALOP . exp AND valbind 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	CASE	shift 63
+	EQUALOP	shift 61
+	FN	shift 58
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	RAISE	shift 41
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	exp	goto 338
+	expnode	goto 19
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 242:
+
+	cpatnode : cpat COLON . ty 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 339
+	ty'	goto 216
+	ty'node	goto 215
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 243:
+
+	pat : cpat BAR . barcpats 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 240
+	OP	shift 113
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 108
+	barcpats	goto 341
+	const	goto 107
+	const'	goto 22
+	cpat	goto 340
+	cpatnode	goto 105
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 244:
+
+	cpatnode : cpat AS . cpat 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 240
+	OP	shift 113
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 108
+	const	goto 107
+	const'	goto 22
+	cpat	goto 342
+	cpatnode	goto 105
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 245:
+
+	apats : apat apats .  (reduce by rule 257)
+
+
+
+	.	reduce by rule 257
+
+
+state 246:
+
+	valbind : REC rvalbind .  (reduce by rule 132)
+
+
+
+	.	reduce by rule 132
+
+
+state 247:
+
+	rvalbind : pat . EQUALOP FN match 
+	rvalbind : pat . EQUALOP FN match AND rvalbind 
+
+	EQUALOP	shift 343
+
+
+	.	error
+
+
+state 248:
+
+	rvalbind : REC . rvalbind 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 240
+	OP	shift 113
+	REC	shift 248
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 108
+	const	goto 107
+	const'	goto 22
+	cpat	goto 106
+	cpatnode	goto 105
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	pat	goto 247
+	rvalbind	goto 344
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 249:
+
+	apatnode : OP longvid .  (reduce by rule 260)
+
+
+
+	.	reduce by rule 260
+
+
+state 250:
+
+	tyvarseq : LPAREN tyvar_pc . RPAREN 
+
+	RPAREN	shift 345
+
+
+	.	error
+
+
+state 251:
+
+	tyvar_pc : tyvar .  (reduce by rule 154)
+	tyvar_pc : tyvar . COMMA tyvar_pc 
+
+	COMMA	shift 346
+
+
+	.	reduce by rule 154
+
+
+state 252:
+
+	apatnode : LPAREN pats . RPAREN 
+
+	RPAREN	shift 347
+
+
+	.	error
+
+
+state 253:
+
+	pats : pat . commapats 
+
+	COMMA	shift 349
+
+	commapats	goto 348
+
+	.	reduce by rule 272
+
+
+state 254:
+
+	apatnode : LBRACKET pats . RBRACKET 
+
+	RBRACKET	shift 350
+
+
+	.	error
+
+
+state 255:
+
+	patitem : vid . constraint opaspat 
+
+	COLON	shift 288
+
+	constraint	goto 351
+
+	.	reduce by rule 136
+
+
+state 256:
+
+	idField : shortSymId .  (reduce by rule 338)
+	vidNoEqual : shortSymId .  (reduce by rule 319)
+
+	AS	reduce by rule 319
+	COLON	reduce by rule 319
+	COMMA	reduce by rule 319
+	EQUALOP	reduce by rule 338
+	RBRACE	reduce by rule 319
+
+
+	.	error
+
+
+state 257:
+
+	idField : shortAlphanumId .  (reduce by rule 337)
+	vidNoEqual : shortAlphanumId .  (reduce by rule 318)
+
+	AS	reduce by rule 318
+	COLON	reduce by rule 318
+	COMMA	reduce by rule 318
+	EQUALOP	reduce by rule 337
+	RBRACE	reduce by rule 318
+
+
+	.	error
+
+
+state 258:
+
+	apatnode : LBRACE patitems . RBRACE 
+
+	RBRACE	shift 352
+
+
+	.	error
+
+
+state 259:
+
+	patitems : patitem . COMMA patitems 
+	patitems : patitem .  (reduce by rule 275)
+
+	COMMA	shift 353
+
+
+	.	reduce by rule 275
+
+
+state 260:
+
+	patitem : field . EQUALOP pat 
+
+	EQUALOP	shift 354
+
+
+	.	error
+
+
+state 261:
+
+	apatnode : LBRACE RBRACE .  (reduce by rule 266)
+
+
+
+	.	reduce by rule 266
+
+
+state 262:
+
+	patitems : DOTDOTDOT .  (reduce by rule 276)
+
+
+
+	.	reduce by rule 276
+
+
+state 263:
+
+	idField : ASTERISK .  (reduce by rule 339)
+	vidNoEqual : ASTERISK .  (reduce by rule 320)
+
+	AS	reduce by rule 320
+	COLON	reduce by rule 320
+	COMMA	reduce by rule 320
+	EQUALOP	reduce by rule 339
+	RBRACE	reduce by rule 320
+
+
+	.	error
+
+
+state 264:
+
+	apatnode : HASHLBRACKET pats . RBRACKET 
+
+	RBRACKET	shift 355
+
+
+	.	error
+
+
+state 265:
+
+	tb : tyvars tycon . EQUALOP ty 
+
+	EQUALOP	shift 356
+
+
+	.	error
+
+
+state 266:
+
+	tbs' : tb AND . tbs' 
+
+	TYVAR	shift 118
+	LPAREN	shift 125
+
+	tb	goto 124
+	tbs'	goto 357
+	tyvar	goto 102
+	tyvars	goto 120
+	tyvarseq	goto 119
+
+	.	reduce by rule 151
+
+
+state 267:
+
+	strbinds : strid sigconst . EQUALOP strbinds' 
+
+	EQUALOP	shift 358
+
+
+	.	error
+
+
+state 268:
+
+	sigconst : COLONGT . sigexp 
+
+	SHORTALPHANUMID	shift 72
+	SIG	shift 363
+
+	shortAlphanumId	goto 131
+	sigexp	goto 362
+	sigexp'	goto 361
+	sigexp'node	goto 360
+	sigid	goto 359
+
+	.	error
+
+
+state 269:
+
+	sigconst : COLON . sigexp 
+
+	SHORTALPHANUMID	shift 72
+	SIG	shift 363
+
+	shortAlphanumId	goto 131
+	sigexp	goto 364
+	sigexp'	goto 361
+	sigexp'node	goto 360
+	sigid	goto 359
+
+	.	error
+
+
+state 270:
+
+	sigbinds : sigid EQUALOP . sigexp' sigbinds' 
+
+	SHORTALPHANUMID	shift 72
+	SIG	shift 363
+
+	shortAlphanumId	goto 131
+	sigexp'	goto 365
+	sigexp'node	goto 360
+	sigid	goto 359
+
+	.	error
+
+
+state 271:
+
+	decnolocal : OVERLOAD priority vid . COLON ty AS longvidands 
+
+	COLON	shift 366
+
+
+	.	error
+
+
+state 272:
+
+	longstrids : longstrid longstrids .  (reduce by rule 352)
+
+
+
+	.	reduce by rule 352
+
+
+state 273:
+
+	aexp : LPAREN exp_ps RPAREN .  (reduce by rule 227)
+
+
+
+	.	reduce by rule 227
+
+
+state 274:
+
+	aexp : LPAREN exp_2c RPAREN .  (reduce by rule 228)
+
+
+
+	.	reduce by rule 228
+
+
+state 275:
+
+	exp_ps : exp optsemicolon .  (reduce by rule 202)
+
+
+
+	.	reduce by rule 202
+
+
+state 276:
+
+	exp_ps : exp SEMICOLON . exp_ps 
+	optsemicolon : SEMICOLON .  (reduce by rule 304)
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	CASE	shift 63
+	EQUALOP	shift 61
+	FN	shift 58
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	RAISE	shift 41
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	exp	goto 368
+	exp_ps	goto 367
+	expnode	goto 19
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	reduce by rule 304
+
+
+state 277:
+
+	exp_2c : exp COMMA . exp_2c 
+	exp_2c : exp COMMA . exp 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	CASE	shift 63
+	EQUALOP	shift 61
+	FN	shift 58
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	RAISE	shift 41
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	exp	goto 370
+	exp_2c	goto 369
+	expnode	goto 19
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 278:
+
+	strdecnode : LOCAL strdecs IN . strdecs END 
+
+	ABSTYPE	shift 65
+	DATATYPE	shift 62
+	EXCEPTION	shift 60
+	DO	shift 59
+	FUN	shift 57
+	INFIX	shift 52
+	INFIXR	shift 51
+	LOCAL	shift 47
+	NONFIX	shift 45
+	OPEN	shift 43
+	OVERLOAD	shift 42
+	SEMICOLON	shift 149
+	STRUCTURE	shift 38
+	TYPE	shift 37
+	VAL	shift 36
+	SHOW_BASIS	shift 26
+
+	decnolocal	goto 21
+	fixity	goto 17
+	strdec	goto 148
+	strdecnode	goto 7
+	strdecs	goto 371
+	strdecsnode	goto 146
+
+	.	reduce by rule 11
+
+
+state 279:
+
+	strdecsnode : strdec strdecs .  (reduce by rule 13)
+
+
+
+	.	reduce by rule 13
+
+
+state 280:
+
+	strdecsnode : SEMICOLON strdecs .  (reduce by rule 12)
+
+
+
+	.	reduce by rule 12
+
+
+state 281:
+
+	aexp : LET decs IN . exp_ps END 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	CASE	shift 63
+	EQUALOP	shift 61
+	FN	shift 58
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	RAISE	shift 41
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	exp	goto 368
+	exp_ps	goto 372
+	expnode	goto 19
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 282:
+
+	decs : dec decs .  (reduce by rule 112)
+
+
+
+	.	reduce by rule 112
+
+
+state 283:
+
+	decs : SEMICOLON decs .  (reduce by rule 113)
+
+
+
+	.	reduce by rule 113
+
+
+state 284:
+
+	decnode : LOCAL decs . IN decs END 
+
+	IN	shift 373
+
+
+	.	error
+
+
+state 285:
+
+	aexp : LBRACKET exp_list RBRACKET .  (reduce by rule 229)
+
+
+
+	.	reduce by rule 229
+
+
+state 286:
+
+	exp_list : exp COMMA . exp_list 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	CASE	shift 63
+	EQUALOP	shift 61
+	FN	shift 58
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	RAISE	shift 41
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	exp	goto 157
+	exp_list	goto 374
+	expnode	goto 19
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 287:
+
+	elabel : idField constraint .  (reduce by rule 199)
+
+
+
+	.	reduce by rule 199
+
+
+state 288:
+
+	constraint : COLON . ty 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 375
+	ty'	goto 216
+	ty'node	goto 215
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 289:
+
+	elabel : field EQUALOP . exp 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	CASE	shift 63
+	EQUALOP	shift 61
+	FN	shift 58
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	RAISE	shift 41
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	exp	goto 376
+	expnode	goto 19
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 290:
+
+	aexp : LBRACE elabels RBRACE .  (reduce by rule 224)
+
+
+
+	.	reduce by rule 224
+
+
+state 291:
+
+	elabels : elabel COMMA . elabels 
+
+	INT	shift 168
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	ASTERISK	shift 167
+
+	elabel	goto 165
+	elabels	goto 377
+	field	goto 163
+	idField	goto 162
+	numericField	goto 161
+	shortAlphanumId	goto 160
+	shortSymId	goto 159
+
+	.	error
+
+
+state 292:
+
+	expnode : IF exp THEN . exp ELSE exp 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	CASE	shift 63
+	EQUALOP	shift 61
+	FN	shift 58
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	RAISE	shift 41
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	exp	goto 378
+	expnode	goto 19
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 293:
+
+	aexp : HASHLBRACKET exp_list RBRACKET .  (reduce by rule 222)
+
+
+
+	.	reduce by rule 222
+
+
+state 294:
+
+	funbinds : fctid LPAREN . fctarg RPAREN sigconst EQUALOP funbinds' 
+
+	SHORTALPHANUMID	shift 72
+	DATATYPE	shift 393
+	EQTYPE	shift 392
+	EXCEPTION	shift 391
+	INCLUDE	shift 390
+	SEMICOLON	shift 389
+	SHARING	shift 388
+	STRUCTURE	shift 387
+	TYPE	shift 386
+	VAL	shift 385
+
+	fctarg	goto 384
+	sharespec	goto 383
+	shortAlphanumId	goto 128
+	spec	goto 382
+	specnode	goto 381
+	specs	goto 380
+	strid	goto 379
+
+	.	reduce by rule 63
+
+
+state 295:
+
+	decnolocal : FUN tyvarseq funs .  (reduce by rule 121)
+
+
+
+	.	reduce by rule 121
+
+
+state 296:
+
+	clausesTop : optbar' clauses .  (reduce by rule 141)
+
+
+
+	.	reduce by rule 141
+
+
+state 297:
+
+	funs : clausesTop AND . funs 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	BAR	shift 186
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 240
+	OP	shift 113
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 185
+	clause	goto 184
+	clauses	goto 183
+	clausesTop	goto 182
+	const	goto 107
+	const'	goto 22
+	funs	goto 394
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	optbar'	goto 180
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 298:
+
+	clauses : clause BAR . clauses 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 240
+	OP	shift 113
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 185
+	clause	goto 184
+	clauses	goto 395
+	const	goto 107
+	const'	goto 22
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 299:
+
+	clause : apats constraint . EQUALOP exp 
+
+	EQUALOP	shift 396
+
+
+	.	error
+
+
+state 300:
+
+	match : optbar rules .  (reduce by rule 194)
+
+
+
+	.	reduce by rule 194
+
+error:  state 301: shift/reduce conflict (shift BAR, reduce by rule 195)
+
+state 301:
+
+	rules : rule .  (reduce by rule 195)
+	rules : rule . BAR rules 
+
+	BAR	shift 397
+
+
+	.	reduce by rule 195
+
+
+state 302:
+
+	rule : pat . DARROW exp 
+
+	DARROW	shift 398
+
+
+	.	error
+
+
+state 303:
+
+	ebrhs : ebrhsnode .  (reduce by rule 165)
+
+
+
+	.	reduce by rule 165
+
+
+state 304:
+
+	eb : opcon ebrhs .  (reduce by rule 164)
+
+
+
+	.	reduce by rule 164
+
+
+state 305:
+
+	ebrhsnode : OF . ty 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 399
+	ty'	goto 216
+	ty'node	goto 215
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 306:
+
+	ebrhsnode : EQUALOP . longcon 
+	ebrhsnode : EQUALOP . OP longcon 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	ASTERISK	shift 64
+	EQUALOP	shift 61
+	OP	shift 402
+
+	longcon	goto 401
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 400
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+
+	.	error
+
+
+state 307:
+
+	ebs : eb AND . ebs 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	ASTERISK	shift 64
+	EQUALOP	shift 61
+	OP	shift 196
+
+	con	goto 195
+	eb	goto 194
+	ebs	goto 403
+	opcon	goto 192
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vid	goto 191
+	vidEqual	goto 79
+	vidNoEqual	goto 78
+
+	.	error
+
+
+state 308:
+
+	opcon : OP con .  (reduce by rule 161)
+
+
+
+	.	reduce by rule 161
+
+
+state 309:
+
+	db : tyvars tycon . EQUALOP optbar constrs 
+	repl : tyvars tycon . EQUALOP DATATYPE longtycon 
+
+	EQUALOP	shift 404
+
+
+	.	error
+
+
+state 310:
+
+	datBind : dbs withtypes .  (reduce by rule 186)
+
+
+
+	.	reduce by rule 186
+
+
+state 311:
+
+	withtypes : WITHTYPE . typBind 
+
+	TYVAR	shift 118
+	LPAREN	shift 125
+
+	tb	goto 124
+	tbs	goto 123
+	tbs'	goto 122
+	typBind	goto 405
+	tyvar	goto 102
+	tyvars	goto 120
+	tyvarseq	goto 119
+
+	.	reduce by rule 151
+
+
+state 312:
+
+	dbs' : db AND . dbs' 
+
+	TYVAR	shift 118
+	LPAREN	shift 125
+
+	db	goto 201
+	dbs'	goto 406
+	tyvar	goto 102
+	tyvars	goto 206
+	tyvarseq	goto 119
+
+	.	reduce by rule 151
+
+
+state 313:
+
+	expnode : CASE exp OF . match 
+
+	BAR	shift 186
+
+	match	goto 407
+	optbar	goto 188
+	optbar'	goto 187
+
+	.	reduce by rule 300
+
+
+state 314:
+
+	db : tyvars tycon . EQUALOP optbar constrs 
+
+	EQUALOP	shift 408
+
+
+	.	error
+
+
+state 315:
+
+	decnolocal : ABSTYPE datBind WITH . decs END 
+
+	ABSTYPE	shift 65
+	DATATYPE	shift 62
+	EXCEPTION	shift 60
+	DO	shift 59
+	FUN	shift 57
+	INFIX	shift 52
+	INFIXR	shift 51
+	LOCAL	shift 155
+	NONFIX	shift 45
+	OPEN	shift 43
+	OVERLOAD	shift 42
+	SEMICOLON	shift 154
+	TYPE	shift 37
+	VAL	shift 36
+
+	dec	goto 153
+	decnode	goto 152
+	decnolocal	goto 151
+	decs	goto 409
+	fixity	goto 17
+
+	.	reduce by rule 111
+
+
+state 316:
+
+	ty'node : ty' longtycon .  (reduce by rule 291)
+
+
+
+	.	reduce by rule 291
+
+
+state 317:
+
+	tuple_ty : ty' ASTERISK . tuple_ty 
+	tuple_ty : ty' ASTERISK . ty' 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 412
+	ty'	goto 411
+	ty'node	goto 410
+	tycon	goto 214
+	tyvar	goto 212
+
+	.	error
+
+
+state 318:
+
+	tynode : ty ARROW . ty 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 413
+	ty'	goto 216
+	ty'node	goto 215
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 319:
+
+	ty'node : LPAREN ty0_pc . RPAREN longtycon 
+
+	RPAREN	shift 414
+
+
+	.	error
+
+
+state 320:
+
+	ty'node : LPAREN ty . RPAREN 
+	ty0_pc : ty . COMMA ty 
+	ty0_pc : ty . COMMA ty0_pc 
+	tynode : ty . ARROW ty 
+
+	ARROW	shift 318
+	COMMA	shift 416
+	RPAREN	shift 415
+
+
+	.	error
+
+
+state 321:
+
+	ty'node : LBRACE tlabels . RBRACE 
+
+	RBRACE	shift 417
+
+
+	.	error
+
+
+state 322:
+
+	tlabels : tlabel . COMMA tlabels 
+	tlabels : tlabel .  (reduce by rule 295)
+
+	COMMA	shift 418
+
+
+	.	reduce by rule 295
+
+
+state 323:
+
+	tlabel : field . COLON ty 
+
+	COLON	shift 419
+
+
+	.	error
+
+
+state 324:
+
+	ty'node : LBRACE RBRACE .  (reduce by rule 288)
+
+
+
+	.	reduce by rule 288
+
+
+state 325:
+
+	aexp : PRIM string COLON ty . SEMICOLON 
+	tynode : ty . ARROW ty 
+
+	ARROW	shift 318
+	SEMICOLON	shift 420
+
+
+	.	error
+
+
+state 326:
+
+	aexp : SYMBOL string symattributes COLON . ty SEMICOLON 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 421
+	ty'	goto 216
+	ty'node	goto 215
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 327:
+
+	symattributes : shortAlphanumId symattributes .  (reduce by rule 245)
+
+
+
+	.	reduce by rule 245
+
+
+state 328:
+
+	aexp : SYMBOL ASTERISK COLON ty . SEMICOLON 
+	tynode : ty . ARROW ty 
+
+	ARROW	shift 318
+	SEMICOLON	shift 422
+
+
+	.	error
+
+
+state 329:
+
+	ieattributes : shortAlphanumId ieattributes .  (reduce by rule 243)
+
+
+
+	.	reduce by rule 243
+
+
+state 330:
+
+	aexp : IMPORT string ieattributes COLON . ty SEMICOLON 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 423
+	ty'	goto 216
+	ty'node	goto 215
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 331:
+
+	aexp : IMPORT ASTERISK ieattributes COLON . ty SEMICOLON 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 424
+	ty'	goto 216
+	ty'node	goto 215
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 332:
+
+	aexp : EXPORT string ieattributes COLON . ty SEMICOLON 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 425
+	ty'	goto 216
+	ty'node	goto 215
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 333:
+
+	aexp : ADDRESS string symattributes COLON . ty SEMICOLON 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 426
+	ty'	goto 216
+	ty'node	goto 215
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 334:
+
+	aexp : CONST string COLON ty . SEMICOLON 
+	tynode : ty . ARROW ty 
+
+	ARROW	shift 318
+	SEMICOLON	shift 427
+
+
+	.	error
+
+
+state 335:
+
+	aexp : COMMAND_LINE_CONST string COLON ty . EQUALOP constOrBool SEMICOLON 
+	tynode : ty . ARROW ty 
+
+	ARROW	shift 318
+	EQUALOP	shift 428
+
+
+	.	error
+
+
+state 336:
+
+	aexp : BUILD_CONST string COLON ty . SEMICOLON 
+	tynode : ty . ARROW ty 
+
+	ARROW	shift 318
+	SEMICOLON	shift 429
+
+
+	.	error
+
+
+state 337:
+
+	expnode : exp . HANDLE match 
+	expnode : exp . ORELSE exp 
+	expnode : exp . ANDALSO exp 
+	expnode : exp . COLON ty 
+	expnode : WHILE exp DO exp .  (reduce by rule 212)
+
+	ANDALSO	shift 85
+	COLON	shift 84
+	HANDLE	shift 83
+	ORELSE	shift 82
+
+
+	.	reduce by rule 212
+
+
+state 338:
+
+	expnode : exp . HANDLE match 
+	expnode : exp . ORELSE exp 
+	expnode : exp . ANDALSO exp 
+	expnode : exp . COLON ty 
+	valbind : pat EQUALOP exp .  (reduce by rule 130)
+	valbind : pat EQUALOP exp . AND valbind 
+
+	AND	shift 430
+	ANDALSO	shift 85
+	COLON	shift 84
+	HANDLE	shift 83
+	ORELSE	shift 82
+
+
+	.	reduce by rule 130
+
+
+state 339:
+
+	cpatnode : cpat COLON ty .  (reduce by rule 254)
+	tynode : ty . ARROW ty 
+
+	ARROW	shift 318
+
+
+	.	reduce by rule 254
+
+
+state 340:
+
+	barcpats : cpat .  (reduce by rule 270)
+	barcpats : cpat . BAR barcpats 
+	cpatnode : cpat . AS cpat 
+	cpatnode : cpat . COLON ty 
+
+	AS	shift 244
+	BAR	shift 431
+	COLON	shift 242
+
+
+	.	reduce by rule 270
+
+
+state 341:
+
+	pat : cpat BAR barcpats .  (reduce by rule 250)
+
+
+
+	.	reduce by rule 250
+
+
+state 342:
+
+	cpatnode : cpat . AS cpat 
+	cpatnode : cpat AS cpat .  (reduce by rule 253)
+	cpatnode : cpat . COLON ty 
+
+	AS	shift 244
+	COLON	shift 242
+
+
+	.	reduce by rule 253
+
+
+state 343:
+
+	rvalbind : pat EQUALOP . FN match 
+	rvalbind : pat EQUALOP . FN match AND rvalbind 
+
+	FN	shift 432
+
+
+	.	error
+
+
+state 344:
+
+	rvalbind : REC rvalbind .  (reduce by rule 133)
+
+
+
+	.	reduce by rule 133
+
+
+state 345:
+
+	tyvarseq : LPAREN tyvar_pc RPAREN .  (reduce by rule 153)
+
+
+
+	.	reduce by rule 153
+
+
+state 346:
+
+	tyvar_pc : tyvar COMMA . tyvar_pc 
+
+	TYVAR	shift 118
+
+	tyvar	goto 251
+	tyvar_pc	goto 433
+
+	.	error
+
+
+state 347:
+
+	apatnode : LPAREN pats RPAREN .  (reduce by rule 263)
+
+
+
+	.	reduce by rule 263
+
+
+state 348:
+
+	pats : pat commapats .  (reduce by rule 269)
+
+
+
+	.	reduce by rule 269
+
+
+state 349:
+
+	commapats : COMMA . pat commapats 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 240
+	OP	shift 113
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 108
+	const	goto 107
+	const'	goto 22
+	cpat	goto 106
+	cpatnode	goto 105
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	pat	goto 434
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 350:
+
+	apatnode : LBRACKET pats RBRACKET .  (reduce by rule 264)
+
+
+
+	.	reduce by rule 264
+
+
+state 351:
+
+	patitem : vid constraint . opaspat 
+
+	AS	shift 436
+
+	opaspat	goto 435
+
+	.	reduce by rule 279
+
+
+state 352:
+
+	apatnode : LBRACE patitems RBRACE .  (reduce by rule 267)
+
+
+
+	.	reduce by rule 267
+
+
+state 353:
+
+	patitems : patitem COMMA . patitems 
+
+	INT	shift 168
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	ASTERISK	shift 263
+	DOTDOTDOT	shift 262
+	EQUALOP	shift 61
+
+	field	goto 260
+	idField	goto 174
+	numericField	goto 161
+	patitem	goto 259
+	patitems	goto 437
+	shortAlphanumId	goto 257
+	shortSymId	goto 256
+	vid	goto 255
+	vidEqual	goto 79
+	vidNoEqual	goto 78
+
+	.	error
+
+
+state 354:
+
+	patitem : field EQUALOP . pat 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 240
+	OP	shift 113
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 108
+	const	goto 107
+	const'	goto 22
+	cpat	goto 106
+	cpatnode	goto 105
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	pat	goto 438
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 355:
+
+	apatnode : HASHLBRACKET pats RBRACKET .  (reduce by rule 265)
+
+
+
+	.	reduce by rule 265
+
+
+state 356:
+
+	tb : tyvars tycon EQUALOP . ty 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 439
+	ty'	goto 216
+	ty'node	goto 215
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 357:
+
+	tbs' : tb AND tbs' .  (reduce by rule 148)
+
+
+
+	.	reduce by rule 148
+
+
+state 358:
+
+	strbinds : strid sigconst EQUALOP . strbinds' 
+
+	SHORTALPHANUMID	shift 72
+	LONGALPHANUMID	shift 70
+	LET	shift 450
+	STRUCT	shift 449
+
+	fctid	goto 448
+	longAlphanumId	goto 140
+	longstrid	goto 447
+	shortAlphanumId	goto 446
+	strbinds'	goto 445
+	strexp	goto 444
+	strexp1	goto 443
+	strexp2	goto 442
+	strexp2node	goto 441
+	strexpnode	goto 440
+	strid	goto 137
+
+	.	error
+
+
+state 359:
+
+	sigexp'node : sigid .  (reduce by rule 52)
+
+
+
+	.	reduce by rule 52
+
+
+state 360:
+
+	sigexp' : sigexp'node .  (reduce by rule 51)
+
+
+
+	.	reduce by rule 51
+
+
+state 361:
+
+	sigexp : sigexp' .  (reduce by rule 41)
+	sigexp : sigexp' . whereeqns 
+
+	WHERE	shift 453
+
+	whereeqns	goto 452
+	whereeqns'	goto 451
+
+	.	reduce by rule 41
+
+
+state 362:
+
+	sigconst : COLONGT sigexp .  (reduce by rule 62)
+
+
+
+	.	reduce by rule 62
+
+
+state 363:
+
+	sigexp'node : SIG . specs END 
+
+	DATATYPE	shift 393
+	EQTYPE	shift 392
+	EXCEPTION	shift 391
+	INCLUDE	shift 390
+	SEMICOLON	shift 389
+	SHARING	shift 388
+	STRUCTURE	shift 387
+	TYPE	shift 386
+	VAL	shift 385
+
+	sharespec	goto 383
+	spec	goto 382
+	specnode	goto 381
+	specs	goto 454
+
+	.	reduce by rule 63
+
+
+state 364:
+
+	sigconst : COLON sigexp .  (reduce by rule 61)
+
+
+
+	.	reduce by rule 61
+
+
+state 365:
+
+	sigbinds : sigid EQUALOP sigexp' . sigbinds' 
+
+	AND	shift 457
+	WHERE	shift 456
+
+	sigbinds'	goto 455
+
+	.	reduce by rule 54
+
+
+state 366:
+
+	decnolocal : OVERLOAD priority vid COLON . ty AS longvidands 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 458
+	ty'	goto 216
+	ty'node	goto 215
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 367:
+
+	exp_ps : exp SEMICOLON exp_ps .  (reduce by rule 203)
+
+
+
+	.	reduce by rule 203
+
+
+state 368:
+
+	exp_ps : exp . optsemicolon 
+	exp_ps : exp . SEMICOLON exp_ps 
+	expnode : exp . HANDLE match 
+	expnode : exp . ORELSE exp 
+	expnode : exp . ANDALSO exp 
+	expnode : exp . COLON ty 
+
+	ANDALSO	shift 85
+	COLON	shift 84
+	HANDLE	shift 83
+	ORELSE	shift 82
+	SEMICOLON	shift 276
+
+	optsemicolon	goto 275
+
+	.	reduce by rule 303
+
+
+state 369:
+
+	exp_2c : exp COMMA exp_2c .  (reduce by rule 246)
+
+
+
+	.	reduce by rule 246
+
+
+state 370:
+
+	exp_2c : exp . COMMA exp_2c 
+	exp_2c : exp . COMMA exp 
+	exp_2c : exp COMMA exp .  (reduce by rule 247)
+	expnode : exp . HANDLE match 
+	expnode : exp . ORELSE exp 
+	expnode : exp . ANDALSO exp 
+	expnode : exp . COLON ty 
+
+	ANDALSO	shift 85
+	COLON	shift 84
+	COMMA	shift 277
+	HANDLE	shift 83
+	ORELSE	shift 82
+
+
+	.	reduce by rule 247
+
+
+state 371:
+
+	strdecnode : LOCAL strdecs IN strdecs . END 
+
+	END	shift 459
+
+
+	.	error
+
+
+state 372:
+
+	aexp : LET decs IN exp_ps . END 
+
+	END	shift 460
+
+
+	.	error
+
+
+state 373:
+
+	decnode : LOCAL decs IN . decs END 
+
+	ABSTYPE	shift 65
+	DATATYPE	shift 62
+	EXCEPTION	shift 60
+	DO	shift 59
+	FUN	shift 57
+	INFIX	shift 52
+	INFIXR	shift 51
+	LOCAL	shift 155
+	NONFIX	shift 45
+	OPEN	shift 43
+	OVERLOAD	shift 42
+	SEMICOLON	shift 154
+	TYPE	shift 37
+	VAL	shift 36
+
+	dec	goto 153
+	decnode	goto 152
+	decnolocal	goto 151
+	decs	goto 461
+	fixity	goto 17
+
+	.	reduce by rule 111
+
+
+state 374:
+
+	exp_list : exp COMMA exp_list .  (reduce by rule 249)
+
+
+
+	.	reduce by rule 249
+
+
+state 375:
+
+	constraint : COLON ty .  (reduce by rule 137)
+	tynode : ty . ARROW ty 
+
+	ARROW	shift 318
+
+
+	.	reduce by rule 137
+
+
+state 376:
+
+	elabel : field EQUALOP exp .  (reduce by rule 198)
+	expnode : exp . HANDLE match 
+	expnode : exp . ORELSE exp 
+	expnode : exp . ANDALSO exp 
+	expnode : exp . COLON ty 
+
+	ANDALSO	shift 85
+	COLON	shift 84
+	HANDLE	shift 83
+	ORELSE	shift 82
+
+
+	.	reduce by rule 198
+
+
+state 377:
+
+	elabels : elabel COMMA elabels .  (reduce by rule 200)
+
+
+
+	.	reduce by rule 200
+
+
+state 378:
+
+	expnode : exp . HANDLE match 
+	expnode : exp . ORELSE exp 
+	expnode : exp . ANDALSO exp 
+	expnode : exp . COLON ty 
+	expnode : IF exp THEN exp . ELSE exp 
+
+	ANDALSO	shift 85
+	COLON	shift 84
+	ELSE	shift 462
+	HANDLE	shift 83
+	ORELSE	shift 82
+
+
+	.	error
+
+
+state 379:
+
+	fctarg : strid . COLON sigexp 
+
+	COLON	shift 463
+
+
+	.	error
+
+
+state 380:
+
+	fctarg : specs .  (reduce by rule 110)
+
+
+
+	.	reduce by rule 110
+
+
+state 381:
+
+	spec : specnode .  (reduce by rule 66)
+
+
+
+	.	reduce by rule 66
+
+
+state 382:
+
+	specs : spec . specs 
+
+	DATATYPE	shift 393
+	EQTYPE	shift 392
+	EXCEPTION	shift 391
+	INCLUDE	shift 390
+	SEMICOLON	shift 389
+	SHARING	shift 388
+	STRUCTURE	shift 387
+	TYPE	shift 386
+	VAL	shift 385
+
+	sharespec	goto 383
+	spec	goto 382
+	specnode	goto 381
+	specs	goto 464
+
+	.	reduce by rule 63
+
+
+state 383:
+
+	specnode : sharespec .  (reduce by rule 76)
+
+
+
+	.	reduce by rule 76
+
+
+state 384:
+
+	funbinds : fctid LPAREN fctarg . RPAREN sigconst EQUALOP funbinds' 
+
+	RPAREN	shift 465
+
+
+	.	error
+
+
+state 385:
+
+	specnode : VAL . valdescs 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	ASTERISK	shift 64
+	EQUALOP	shift 61
+
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	valdesc	goto 468
+	valdescs	goto 467
+	vid	goto 466
+	vidEqual	goto 79
+	vidNoEqual	goto 78
+
+	.	error
+
+
+state 386:
+
+	specnode : TYPE . typdescs 
+	specnode : TYPE . typBind 
+
+	TYVAR	shift 118
+	LPAREN	shift 125
+
+	tb	goto 124
+	tbs	goto 123
+	tbs'	goto 122
+	typBind	goto 472
+	typdesc	goto 471
+	typdescs	goto 470
+	tyvar	goto 102
+	tyvars	goto 469
+	tyvarseq	goto 119
+
+	.	reduce by rule 151
+
+
+state 387:
+
+	specnode : STRUCTURE . strdescs 
+
+	SHORTALPHANUMID	shift 72
+
+	shortAlphanumId	goto 128
+	strdescs	goto 474
+	strid	goto 473
+
+	.	error
+
+
+state 388:
+
+	sharespec : SHARING . TYPE longtyconeqns 
+	sharespec : SHARING . longstrideqns 
+
+	SHORTALPHANUMID	shift 72
+	LONGALPHANUMID	shift 70
+	TYPE	shift 477
+
+	longAlphanumId	goto 140
+	longstrid	goto 476
+	longstrideqns	goto 475
+	shortAlphanumId	goto 128
+	strid	goto 137
+
+	.	error
+
+
+state 389:
+
+	specs : SEMICOLON . specs 
+
+	DATATYPE	shift 393
+	EQTYPE	shift 392
+	EXCEPTION	shift 391
+	INCLUDE	shift 390
+	SEMICOLON	shift 389
+	SHARING	shift 388
+	STRUCTURE	shift 387
+	TYPE	shift 386
+	VAL	shift 385
+
+	sharespec	goto 383
+	spec	goto 382
+	specnode	goto 381
+	specs	goto 478
+
+	.	reduce by rule 63
+
+
+state 390:
+
+	specnode : INCLUDE . sigexp 
+	specnode : INCLUDE . sigid sigids 
+
+	SHORTALPHANUMID	shift 72
+	SIG	shift 363
+
+	shortAlphanumId	goto 131
+	sigexp	goto 480
+	sigexp'	goto 361
+	sigexp'node	goto 360
+	sigid	goto 479
+
+	.	error
+
+
+state 391:
+
+	specnode : EXCEPTION . exndescs 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	ASTERISK	shift 64
+	EQUALOP	shift 61
+
+	con	goto 483
+	exndesc	goto 482
+	exndescs	goto 481
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vid	goto 191
+	vidEqual	goto 79
+	vidNoEqual	goto 78
+
+	.	error
+
+
+state 392:
+
+	specnode : EQTYPE . typdescs 
+
+	TYVAR	shift 118
+	LPAREN	shift 125
+
+	typdesc	goto 471
+	typdescs	goto 485
+	tyvar	goto 102
+	tyvars	goto 484
+	tyvarseq	goto 119
+
+	.	reduce by rule 151
+
+
+state 393:
+
+	specnode : DATATYPE . datatypeRhs 
+
+	TYVAR	shift 118
+	LPAREN	shift 125
+
+	datBind	goto 204
+	datatypeRhs	goto 486
+	datatypeRhsnode	goto 202
+	db	goto 201
+	dbs	goto 200
+	dbs'	goto 199
+	repl	goto 198
+	tyvar	goto 102
+	tyvars	goto 197
+	tyvarseq	goto 119
+
+	.	reduce by rule 151
+
+
+state 394:
+
+	funs : clausesTop AND funs .  (reduce by rule 139)
+
+
+
+	.	reduce by rule 139
+
+
+state 395:
+
+	clauses : clause BAR clauses .  (reduce by rule 143)
+
+
+
+	.	reduce by rule 143
+
+
+state 396:
+
+	clause : apats constraint EQUALOP . exp 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	CASE	shift 63
+	EQUALOP	shift 61
+	FN	shift 58
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	RAISE	shift 41
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	exp	goto 487
+	expnode	goto 19
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 397:
+
+	rules : rule BAR . rules 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 240
+	OP	shift 113
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 108
+	const	goto 107
+	const'	goto 22
+	cpat	goto 106
+	cpatnode	goto 105
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	pat	goto 302
+	rule	goto 301
+	rules	goto 488
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 398:
+
+	rule : pat DARROW . exp 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	CASE	shift 63
+	EQUALOP	shift 61
+	FN	shift 58
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	RAISE	shift 41
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	exp	goto 489
+	expnode	goto 19
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 399:
+
+	ebrhsnode : OF ty .  (reduce by rule 167)
+	tynode : ty . ARROW ty 
+
+	ARROW	shift 318
+
+
+	.	reduce by rule 167
+
+
+state 400:
+
+	longcon : longvid .  (reduce by rule 331)
+
+
+
+	.	reduce by rule 331
+
+
+state 401:
+
+	ebrhsnode : EQUALOP longcon .  (reduce by rule 168)
+
+
+
+	.	reduce by rule 168
+
+
+state 402:
+
+	ebrhsnode : EQUALOP OP . longcon 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	ASTERISK	shift 64
+	EQUALOP	shift 61
+
+	longcon	goto 490
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 400
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+
+	.	error
+
+
+state 403:
+
+	ebs : eb AND ebs .  (reduce by rule 163)
+
+
+
+	.	reduce by rule 163
+
+
+state 404:
+
+	db : tyvars tycon EQUALOP . optbar constrs 
+	repl : tyvars tycon EQUALOP . DATATYPE longtycon 
+
+	BAR	shift 186
+	DATATYPE	shift 492
+
+	optbar	goto 491
+	optbar'	goto 187
+
+	.	reduce by rule 300
+
+
+state 405:
+
+	withtypes : WITHTYPE typBind .  (reduce by rule 191)
+
+
+
+	.	reduce by rule 191
+
+
+state 406:
+
+	dbs' : db AND dbs' .  (reduce by rule 189)
+
+
+
+	.	reduce by rule 189
+
+
+state 407:
+
+	expnode : CASE exp OF match .  (reduce by rule 211)
+
+
+
+	.	reduce by rule 211
+
+
+state 408:
+
+	db : tyvars tycon EQUALOP . optbar constrs 
+
+	BAR	shift 186
+
+	optbar	goto 491
+	optbar'	goto 187
+
+	.	reduce by rule 300
+
+
+state 409:
+
+	decnolocal : ABSTYPE datBind WITH decs . END 
+
+	END	shift 493
+
+
+	.	error
+
+
+state 410:
+
+	ty' : ty'node .  (reduce by rule 285)
+
+
+
+	.	reduce by rule 285
+
+
+state 411:
+
+	tuple_ty : ty' . ASTERISK tuple_ty 
+	tuple_ty : ty' . ASTERISK ty' 
+	tuple_ty : ty' ASTERISK ty' .  (reduce by rule 297)
+	ty'node : ty' . longtycon 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	ASTERISK	shift 317
+
+	longAlphanumId	goto 222
+	longtycon	goto 316
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tycon	goto 214
+
+	.	reduce by rule 297
+
+
+state 412:
+
+	tuple_ty : ty' ASTERISK tuple_ty .  (reduce by rule 296)
+
+
+
+	.	reduce by rule 296
+
+
+state 413:
+
+	tynode : ty . ARROW ty 
+	tynode : ty ARROW ty .  (reduce by rule 283)
+
+	ARROW	shift 318
+
+
+	.	reduce by rule 283
+
+
+state 414:
+
+	ty'node : LPAREN ty0_pc RPAREN . longtycon 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+
+	longAlphanumId	goto 222
+	longtycon	goto 494
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tycon	goto 214
+
+	.	error
+
+
+state 415:
+
+	ty'node : LPAREN ty RPAREN .  (reduce by rule 290)
+
+
+
+	.	reduce by rule 290
+
+
+state 416:
+
+	ty0_pc : ty COMMA . ty 
+	ty0_pc : ty COMMA . ty0_pc 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 496
+	ty'	goto 216
+	ty'node	goto 215
+	ty0_pc	goto 495
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 417:
+
+	ty'node : LBRACE tlabels RBRACE .  (reduce by rule 287)
+
+
+
+	.	reduce by rule 287
+
+
+state 418:
+
+	tlabels : tlabel COMMA . tlabels 
+
+	INT	shift 168
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	ASTERISK	shift 167
+
+	field	goto 323
+	idField	goto 174
+	numericField	goto 161
+	shortAlphanumId	goto 160
+	shortSymId	goto 159
+	tlabel	goto 322
+	tlabels	goto 497
+
+	.	error
+
+
+state 419:
+
+	tlabel : field COLON . ty 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 498
+	ty'	goto 216
+	ty'node	goto 215
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 420:
+
+	aexp : PRIM string COLON ty SEMICOLON .  (reduce by rule 239)
+
+
+
+	.	reduce by rule 239
+
+
+state 421:
+
+	aexp : SYMBOL string symattributes COLON ty . SEMICOLON 
+	tynode : ty . ARROW ty 
+
+	ARROW	shift 318
+	SEMICOLON	shift 499
+
+
+	.	error
+
+
+state 422:
+
+	aexp : SYMBOL ASTERISK COLON ty SEMICOLON .  (reduce by rule 241)
+
+
+
+	.	reduce by rule 241
+
+
+state 423:
+
+	aexp : IMPORT string ieattributes COLON ty . SEMICOLON 
+	tynode : ty . ARROW ty 
+
+	ARROW	shift 318
+	SEMICOLON	shift 500
+
+
+	.	error
+
+
+state 424:
+
+	aexp : IMPORT ASTERISK ieattributes COLON ty . SEMICOLON 
+	tynode : ty . ARROW ty 
+
+	ARROW	shift 318
+	SEMICOLON	shift 501
+
+
+	.	error
+
+
+state 425:
+
+	aexp : EXPORT string ieattributes COLON ty . SEMICOLON 
+	tynode : ty . ARROW ty 
+
+	ARROW	shift 318
+	SEMICOLON	shift 502
+
+
+	.	error
+
+
+state 426:
+
+	aexp : ADDRESS string symattributes COLON ty . SEMICOLON 
+	tynode : ty . ARROW ty 
+
+	ARROW	shift 318
+	SEMICOLON	shift 503
+
+
+	.	error
+
+
+state 427:
+
+	aexp : CONST string COLON ty SEMICOLON .  (reduce by rule 235)
+
+
+
+	.	reduce by rule 235
+
+
+state 428:
+
+	aexp : COMMAND_LINE_CONST string COLON ty EQUALOP . constOrBool SEMICOLON 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+
+	const	goto 506
+	const'	goto 22
+	constOrBool	goto 505
+	int	goto 16
+	shortAlphanumId	goto 504
+	word	goto 1
+
+	.	error
+
+
+state 429:
+
+	aexp : BUILD_CONST string COLON ty SEMICOLON .  (reduce by rule 233)
+
+
+
+	.	reduce by rule 233
+
+
+state 430:
+
+	valbind : pat EQUALOP exp AND . valbind 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 240
+	OP	shift 113
+	REC	shift 112
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 108
+	const	goto 107
+	const'	goto 22
+	cpat	goto 106
+	cpatnode	goto 105
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	pat	goto 103
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	valbind	goto 507
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 431:
+
+	barcpats : cpat BAR . barcpats 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 240
+	OP	shift 113
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 108
+	barcpats	goto 508
+	const	goto 107
+	const'	goto 22
+	cpat	goto 340
+	cpatnode	goto 105
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 432:
+
+	rvalbind : pat EQUALOP FN . match 
+	rvalbind : pat EQUALOP FN . match AND rvalbind 
+
+	BAR	shift 186
+
+	match	goto 509
+	optbar	goto 188
+	optbar'	goto 187
+
+	.	reduce by rule 300
+
+
+state 433:
+
+	tyvar_pc : tyvar COMMA tyvar_pc .  (reduce by rule 155)
+
+
+
+	.	reduce by rule 155
+
+
+state 434:
+
+	commapats : COMMA pat . commapats 
+
+	COMMA	shift 349
+
+	commapats	goto 510
+
+	.	reduce by rule 272
+
+
+state 435:
+
+	patitem : vid constraint opaspat .  (reduce by rule 278)
+
+
+
+	.	reduce by rule 278
+
+
+state 436:
+
+	opaspat : AS . pat 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 240
+	OP	shift 113
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 108
+	const	goto 107
+	const'	goto 22
+	cpat	goto 106
+	cpatnode	goto 105
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	pat	goto 511
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 437:
+
+	patitems : patitem COMMA patitems .  (reduce by rule 274)
+
+
+
+	.	reduce by rule 274
+
+
+state 438:
+
+	patitem : field EQUALOP pat .  (reduce by rule 277)
+
+
+
+	.	reduce by rule 277
+
+
+state 439:
+
+	tb : tyvars tycon EQUALOP ty .  (reduce by rule 149)
+	tynode : ty . ARROW ty 
+
+	ARROW	shift 318
+
+
+	.	reduce by rule 149
+
+
+state 440:
+
+	strexp : strexpnode .  (reduce by rule 28)
+
+
+
+	.	reduce by rule 28
+
+
+state 441:
+
+	strexp2 : strexp2node .  (reduce by rule 34)
+	strexpnode : strexp2node .  (reduce by rule 31)
+
+	ABSTYPE	reduce by rule 34
+	AND	reduce by rule 34
+	COLON	reduce by rule 31
+	COLONGT	reduce by rule 31
+	DATATYPE	reduce by rule 34
+	END	reduce by rule 34
+	EOF	reduce by rule 34
+	EXCEPTION	reduce by rule 34
+	DO	reduce by rule 34
+	FUN	reduce by rule 34
+	FUNCTOR	reduce by rule 34
+	IN	reduce by rule 34
+	INFIX	reduce by rule 34
+	INFIXR	reduce by rule 34
+	LOCAL	reduce by rule 34
+	NONFIX	reduce by rule 34
+	OPEN	reduce by rule 34
+	OVERLOAD	reduce by rule 34
+	RPAREN	reduce by rule 34
+	SEMICOLON	reduce by rule 34
+	SIGNATURE	reduce by rule 34
+	STRUCTURE	reduce by rule 34
+	TYPE	reduce by rule 34
+	VAL	reduce by rule 34
+	SHOW_BASIS	reduce by rule 34
+
+
+	.	error
+
+
+state 442:
+
+	strbinds' : strexp2 . strbinds'2 
+
+	AND	shift 513
+
+	strbinds'2	goto 512
+
+	.	reduce by rule 26
+
+
+state 443:
+
+	strbinds' : strexp1 . strbinds'1 
+	strexpnode : strexp1 .  (reduce by rule 29)
+	strexpnode : strexp1 . whereeqns 
+
+	ABSTYPE	reduce by rule 26
+	AND	shift 513
+	COLON	reduce by rule 29
+	COLONGT	reduce by rule 29
+	DATATYPE	reduce by rule 26
+	END	reduce by rule 26
+	EOF	reduce by rule 26
+	EXCEPTION	reduce by rule 26
+	DO	reduce by rule 26
+	FUN	reduce by rule 26
+	FUNCTOR	reduce by rule 26
+	IN	reduce by rule 26
+	INFIX	reduce by rule 26
+	INFIXR	reduce by rule 26
+	LOCAL	reduce by rule 26
+	NONFIX	reduce by rule 26
+	OPEN	reduce by rule 26
+	OVERLOAD	reduce by rule 26
+	RPAREN	reduce by rule 26
+	SEMICOLON	reduce by rule 26
+	SIGNATURE	reduce by rule 26
+	STRUCTURE	reduce by rule 26
+	TYPE	reduce by rule 26
+	VAL	reduce by rule 26
+	WHERE	shift 517
+	SHOW_BASIS	reduce by rule 26
+
+	strbinds'1	goto 516
+	strbinds'2	goto 515
+	whereeqns	goto 514
+	whereeqns'	goto 451
+
+	.	error
+
+
+state 444:
+
+	strexp1 : strexp . COLON sigexp' 
+	strexp1 : strexp . COLONGT sigexp' 
+
+	COLON	shift 519
+	COLONGT	shift 518
+
+
+	.	error
+
+
+state 445:
+
+	strbinds : strid sigconst EQUALOP strbinds' .  (reduce by rule 19)
+
+
+
+	.	reduce by rule 19
+
+
+state 446:
+
+	fctid : shortAlphanumId .  (reduce by rule 346)
+	strid : shortAlphanumId .  (reduce by rule 342)
+
+	ABSTYPE	reduce by rule 342
+	AND	reduce by rule 342
+	COLON	reduce by rule 342
+	COLONGT	reduce by rule 342
+	DATATYPE	reduce by rule 342
+	END	reduce by rule 342
+	EOF	reduce by rule 342
+	EXCEPTION	reduce by rule 342
+	DO	reduce by rule 342
+	FUN	reduce by rule 342
+	FUNCTOR	reduce by rule 342
+	IN	reduce by rule 342
+	INFIX	reduce by rule 342
+	INFIXR	reduce by rule 342
+	LOCAL	reduce by rule 342
+	LPAREN	reduce by rule 346
+	NONFIX	reduce by rule 342
+	OPEN	reduce by rule 342
+	OVERLOAD	reduce by rule 342
+	RPAREN	reduce by rule 342
+	SEMICOLON	reduce by rule 342
+	SIGNATURE	reduce by rule 342
+	STRUCTURE	reduce by rule 342
+	TYPE	reduce by rule 342
+	VAL	reduce by rule 342
+	SHOW_BASIS	reduce by rule 342
+
+
+	.	error
+
+
+state 447:
+
+	strexp2node : longstrid .  (reduce by rule 35)
+
+
+
+	.	reduce by rule 35
+
+
+state 448:
+
+	strexp2node : fctid . arg_fct 
+
+	LPAREN	shift 521
+
+	arg_fct	goto 520
+
+	.	error
+
+
+state 449:
+
+	strexp2node : STRUCT . strdecs END 
+
+	ABSTYPE	shift 65
+	DATATYPE	shift 62
+	EXCEPTION	shift 60
+	DO	shift 59
+	FUN	shift 57
+	INFIX	shift 52
+	INFIXR	shift 51
+	LOCAL	shift 47
+	NONFIX	shift 45
+	OPEN	shift 43
+	OVERLOAD	shift 42
+	SEMICOLON	shift 149
+	STRUCTURE	shift 38
+	TYPE	shift 37
+	VAL	shift 36
+	SHOW_BASIS	shift 26
+
+	decnolocal	goto 21
+	fixity	goto 17
+	strdec	goto 148
+	strdecnode	goto 7
+	strdecs	goto 522
+	strdecsnode	goto 146
+
+	.	reduce by rule 11
+
+
+state 450:
+
+	strexp2node : LET . strdecs IN strexp END 
+
+	ABSTYPE	shift 65
+	DATATYPE	shift 62
+	EXCEPTION	shift 60
+	DO	shift 59
+	FUN	shift 57
+	INFIX	shift 52
+	INFIXR	shift 51
+	LOCAL	shift 47
+	NONFIX	shift 45
+	OPEN	shift 43
+	OVERLOAD	shift 42
+	SEMICOLON	shift 149
+	STRUCTURE	shift 38
+	TYPE	shift 37
+	VAL	shift 36
+	SHOW_BASIS	shift 26
+
+	decnolocal	goto 21
+	fixity	goto 17
+	strdec	goto 148
+	strdecnode	goto 7
+	strdecs	goto 523
+	strdecsnode	goto 146
+
+	.	reduce by rule 11
+
+
+state 451:
+
+	whereeqns : whereeqns' .  (reduce by rule 43)
+
+
+
+	.	reduce by rule 43
+
+
+state 452:
+
+	sigexp : sigexp' whereeqns .  (reduce by rule 42)
+
+
+
+	.	reduce by rule 42
+
+
+state 453:
+
+	whereeqns' : WHERE . whereeqn 
+	whereeqns' : WHERE . whereeqn whereeqns' 
+	whereeqns' : WHERE . whereeqn whereandeqns 
+
+	TYPE	shift 525
+
+	whereeqn	goto 524
+
+	.	error
+
+
+state 454:
+
+	sigexp'node : SIG specs . END 
+
+	END	shift 526
+
+
+	.	error
+
+
+state 455:
+
+	sigbinds : sigid EQUALOP sigexp' sigbinds' .  (reduce by rule 50)
+
+
+
+	.	reduce by rule 50
+
+
+state 456:
+
+	sigbinds' : WHERE . whereeqn sigbinds'' 
+
+	TYPE	shift 525
+
+	whereeqn	goto 527
+
+	.	error
+
+
+state 457:
+
+	sigbinds' : AND . sigbinds 
+
+	SHORTALPHANUMID	shift 72
+
+	shortAlphanumId	goto 131
+	sigbinds	goto 528
+	sigid	goto 129
+
+	.	error
+
+
+state 458:
+
+	decnolocal : OVERLOAD priority vid COLON ty . AS longvidands 
+	tynode : ty . ARROW ty 
+
+	ARROW	shift 318
+	AS	shift 529
+
+
+	.	error
+
+
+state 459:
+
+	strdecnode : LOCAL strdecs IN strdecs END .  (reduce by rule 16)
+
+
+
+	.	reduce by rule 16
+
+
+state 460:
+
+	aexp : LET decs IN exp_ps END .  (reduce by rule 231)
+
+
+
+	.	reduce by rule 231
+
+
+state 461:
+
+	decnode : LOCAL decs IN decs . END 
+
+	END	shift 530
+
+
+	.	error
+
+
+state 462:
+
+	expnode : IF exp THEN exp ELSE . exp 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	CASE	shift 63
+	EQUALOP	shift 61
+	FN	shift 58
+	HASH	shift 55
+	HASHLBRACKET	shift 54
+	IF	shift 53
+	LBRACE	shift 50
+	LBRACKET	shift 49
+	LET	shift 48
+	LPAREN	shift 46
+	OP	shift 44
+	RAISE	shift 41
+	WHILE	shift 35
+	BUILD_CONST	shift 34
+	COMMAND_LINE_CONST	shift 33
+	CONST	shift 32
+	ADDRESS	shift 31
+	EXPORT	shift 30
+	IMPORT	shift 29
+	SYMBOL	shift 28
+	PRIM	shift 27
+
+	aexp	goto 25
+	app_exp	goto 24
+	const	goto 23
+	const'	goto 22
+	exp	goto 531
+	expnode	goto 19
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 13
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 463:
+
+	fctarg : strid COLON . sigexp 
+
+	SHORTALPHANUMID	shift 72
+	SIG	shift 363
+
+	shortAlphanumId	goto 131
+	sigexp	goto 532
+	sigexp'	goto 361
+	sigexp'node	goto 360
+	sigid	goto 359
+
+	.	error
+
+
+state 464:
+
+	specs : spec specs .  (reduce by rule 65)
+
+
+
+	.	reduce by rule 65
+
+
+state 465:
+
+	funbinds : fctid LPAREN fctarg RPAREN . sigconst EQUALOP funbinds' 
+
+	COLON	shift 269
+	COLONGT	shift 268
+
+	sigconst	goto 533
+
+	.	reduce by rule 60
+
+
+state 466:
+
+	valdesc : vid . COLON ty 
+
+	COLON	shift 534
+
+
+	.	error
+
+
+state 467:
+
+	specnode : VAL valdescs .  (reduce by rule 67)
+
+
+
+	.	reduce by rule 67
+
+
+state 468:
+
+	valdescs : valdesc .  (reduce by rule 92)
+	valdescs : valdesc . AND valdescs 
+
+	AND	shift 535
+
+
+	.	reduce by rule 92
+
+
+state 469:
+
+	tb : tyvars . tycon EQUALOP ty 
+	typdesc : tyvars . tycon 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tycon	goto 536
+
+	.	error
+
+
+state 470:
+
+	specnode : TYPE typdescs .  (reduce by rule 68)
+
+
+
+	.	reduce by rule 68
+
+
+state 471:
+
+	typdescs : typdesc .  (reduce by rule 89)
+	typdescs : typdesc . AND typdescs 
+
+	AND	shift 537
+
+
+	.	reduce by rule 89
+
+
+state 472:
+
+	specnode : TYPE typBind .  (reduce by rule 69)
+
+
+
+	.	reduce by rule 69
+
+
+state 473:
+
+	strdescs : strid . COLON sigexp' strdescs' 
+
+	COLON	shift 538
+
+
+	.	error
+
+
+state 474:
+
+	specnode : STRUCTURE strdescs .  (reduce by rule 73)
+
+
+
+	.	reduce by rule 73
+
+
+state 475:
+
+	sharespec : SHARING longstrideqns .  (reduce by rule 78)
+
+
+
+	.	reduce by rule 78
+
+
+state 476:
+
+	longstrideqns : longstrid . EQUALOP longstrid 
+	longstrideqns : longstrid . EQUALOP longstrideqns 
+
+	EQUALOP	shift 539
+
+
+	.	error
+
+
+state 477:
+
+	sharespec : SHARING TYPE . longtyconeqns 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+
+	longAlphanumId	goto 222
+	longtycon	goto 541
+	longtyconeqns	goto 540
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tycon	goto 214
+
+	.	error
+
+
+state 478:
+
+	specs : SEMICOLON specs .  (reduce by rule 64)
+
+
+
+	.	reduce by rule 64
+
+
+state 479:
+
+	sigexp'node : sigid .  (reduce by rule 52)
+	specnode : INCLUDE sigid . sigids 
+
+	SHORTALPHANUMID	shift 72
+
+	shortAlphanumId	goto 131
+	sigid	goto 543
+	sigids	goto 542
+
+	.	reduce by rule 52
+
+
+state 480:
+
+	specnode : INCLUDE sigexp .  (reduce by rule 74)
+
+
+
+	.	reduce by rule 74
+
+
+state 481:
+
+	specnode : EXCEPTION exndescs .  (reduce by rule 72)
+
+
+
+	.	reduce by rule 72
+
+
+state 482:
+
+	exndescs : exndesc .  (reduce by rule 95)
+	exndescs : exndesc . AND exndescs 
+
+	AND	shift 544
+
+
+	.	reduce by rule 95
+
+
+state 483:
+
+	exndesc : con . tyOpt 
+
+	OF	shift 546
+
+	tyOpt	goto 545
+
+	.	reduce by rule 98
+
+
+state 484:
+
+	typdesc : tyvars . tycon 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tycon	goto 547
+
+	.	error
+
+
+state 485:
+
+	specnode : EQTYPE typdescs .  (reduce by rule 70)
+
+
+
+	.	reduce by rule 70
+
+
+state 486:
+
+	specnode : DATATYPE datatypeRhs .  (reduce by rule 71)
+
+
+
+	.	reduce by rule 71
+
+
+state 487:
+
+	clause : apats constraint EQUALOP exp .  (reduce by rule 144)
+	expnode : exp . HANDLE match 
+	expnode : exp . ORELSE exp 
+	expnode : exp . ANDALSO exp 
+	expnode : exp . COLON ty 
+
+	ANDALSO	shift 85
+	COLON	shift 84
+	HANDLE	shift 83
+	ORELSE	shift 82
+
+
+	.	reduce by rule 144
+
+
+state 488:
+
+	rules : rule BAR rules .  (reduce by rule 196)
+
+
+
+	.	reduce by rule 196
+
+
+state 489:
+
+	expnode : exp . HANDLE match 
+	expnode : exp . ORELSE exp 
+	expnode : exp . ANDALSO exp 
+	expnode : exp . COLON ty 
+	rule : pat DARROW exp .  (reduce by rule 197)
+
+	ANDALSO	shift 85
+	COLON	shift 84
+	HANDLE	shift 83
+	ORELSE	shift 82
+
+
+	.	reduce by rule 197
+
+
+state 490:
+
+	ebrhsnode : EQUALOP OP longcon .  (reduce by rule 169)
+
+
+
+	.	reduce by rule 169
+
+
+state 491:
+
+	db : tyvars tycon EQUALOP optbar . constrs 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	ASTERISK	shift 64
+	EQUALOP	shift 61
+	OP	shift 196
+
+	con	goto 195
+	constr	goto 550
+	constrs	goto 549
+	opcon	goto 548
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vid	goto 191
+	vidEqual	goto 79
+	vidNoEqual	goto 78
+
+	.	error
+
+
+state 492:
+
+	repl : tyvars tycon EQUALOP DATATYPE . longtycon 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+
+	longAlphanumId	goto 222
+	longtycon	goto 551
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tycon	goto 214
+
+	.	error
+
+
+state 493:
+
+	decnolocal : ABSTYPE datBind WITH decs END .  (reduce by rule 124)
+
+
+
+	.	reduce by rule 124
+
+
+state 494:
+
+	ty'node : LPAREN ty0_pc RPAREN longtycon .  (reduce by rule 289)
+
+
+
+	.	reduce by rule 289
+
+
+state 495:
+
+	ty0_pc : ty COMMA ty0_pc .  (reduce by rule 299)
+
+
+
+	.	reduce by rule 299
+
+
+state 496:
+
+	ty0_pc : ty . COMMA ty 
+	ty0_pc : ty COMMA ty .  (reduce by rule 298)
+	ty0_pc : ty . COMMA ty0_pc 
+	tynode : ty . ARROW ty 
+
+	ARROW	shift 318
+	COMMA	shift 416
+
+
+	.	reduce by rule 298
+
+
+state 497:
+
+	tlabels : tlabel COMMA tlabels .  (reduce by rule 294)
+
+
+
+	.	reduce by rule 294
+
+
+state 498:
+
+	tlabel : field COLON ty .  (reduce by rule 293)
+	tynode : ty . ARROW ty 
+
+	ARROW	shift 318
+
+
+	.	reduce by rule 293
+
+
+state 499:
+
+	aexp : SYMBOL string symattributes COLON ty SEMICOLON .  (reduce by rule 240)
+
+
+
+	.	reduce by rule 240
+
+
+state 500:
+
+	aexp : IMPORT string ieattributes COLON ty SEMICOLON .  (reduce by rule 237)
+
+
+
+	.	reduce by rule 237
+
+
+state 501:
+
+	aexp : IMPORT ASTERISK ieattributes COLON ty SEMICOLON .  (reduce by rule 238)
+
+
+
+	.	reduce by rule 238
+
+
+state 502:
+
+	aexp : EXPORT string ieattributes COLON ty SEMICOLON .  (reduce by rule 236)
+
+
+
+	.	reduce by rule 236
+
+
+state 503:
+
+	aexp : ADDRESS string symattributes COLON ty SEMICOLON .  (reduce by rule 232)
+
+
+
+	.	reduce by rule 232
+
+
+state 504:
+
+	constOrBool : shortAlphanumId .  (reduce by rule 306)
+
+
+
+	.	reduce by rule 306
+
+
+state 505:
+
+	aexp : COMMAND_LINE_CONST string COLON ty EQUALOP constOrBool . SEMICOLON 
+
+	SEMICOLON	shift 552
+
+
+	.	error
+
+
+state 506:
+
+	constOrBool : const .  (reduce by rule 305)
+
+
+
+	.	reduce by rule 305
+
+
+state 507:
+
+	valbind : pat EQUALOP exp AND valbind .  (reduce by rule 131)
+
+
+
+	.	reduce by rule 131
+
+
+state 508:
+
+	barcpats : cpat BAR barcpats .  (reduce by rule 271)
+
+
+
+	.	reduce by rule 271
+
+
+state 509:
+
+	rvalbind : pat EQUALOP FN match .  (reduce by rule 134)
+	rvalbind : pat EQUALOP FN match . AND rvalbind 
+
+	AND	shift 553
+
+
+	.	reduce by rule 134
+
+
+state 510:
+
+	commapats : COMMA pat commapats .  (reduce by rule 273)
+
+
+
+	.	reduce by rule 273
+
+
+state 511:
+
+	opaspat : AS pat .  (reduce by rule 280)
+
+
+
+	.	reduce by rule 280
+
+
+state 512:
+
+	strbinds' : strexp2 strbinds'2 .  (reduce by rule 21)
+
+
+
+	.	reduce by rule 21
+
+
+state 513:
+
+	strbinds'2 : AND . strbinds 
+
+	SHORTALPHANUMID	shift 72
+
+	shortAlphanumId	goto 128
+	strbinds	goto 554
+	strid	goto 126
+
+	.	error
+
+
+state 514:
+
+	strexpnode : strexp1 whereeqns .  (reduce by rule 30)
+
+
+
+	.	reduce by rule 30
+
+
+state 515:
+
+	strbinds'1 : strbinds'2 .  (reduce by rule 22)
+
+
+
+	.	reduce by rule 22
+
+
+state 516:
+
+	strbinds' : strexp1 strbinds'1 .  (reduce by rule 20)
+
+
+
+	.	reduce by rule 20
+
+
+state 517:
+
+	strbinds'1 : WHERE . whereeqn strbinds'1' 
+	whereeqns' : WHERE . whereeqn 
+	whereeqns' : WHERE . whereeqn whereeqns' 
+	whereeqns' : WHERE . whereeqn whereandeqns 
+
+	TYPE	shift 525
+
+	whereeqn	goto 555
+
+	.	error
+
+
+state 518:
+
+	strexp1 : strexp COLONGT . sigexp' 
+
+	SHORTALPHANUMID	shift 72
+	SIG	shift 363
+
+	shortAlphanumId	goto 131
+	sigexp'	goto 556
+	sigexp'node	goto 360
+	sigid	goto 359
+
+	.	error
+
+
+state 519:
+
+	strexp1 : strexp COLON . sigexp' 
+
+	SHORTALPHANUMID	shift 72
+	SIG	shift 363
+
+	shortAlphanumId	goto 131
+	sigexp'	goto 557
+	sigexp'node	goto 360
+	sigid	goto 359
+
+	.	error
+
+
+state 520:
+
+	strexp2node : fctid arg_fct .  (reduce by rule 37)
+
+
+
+	.	reduce by rule 37
+
+
+state 521:
+
+	arg_fct : LPAREN . strexp RPAREN 
+	arg_fct : LPAREN . strdecs RPAREN 
+
+	SHORTALPHANUMID	shift 72
+	LONGALPHANUMID	shift 70
+	ABSTYPE	shift 65
+	DATATYPE	shift 62
+	EXCEPTION	shift 60
+	DO	shift 59
+	FUN	shift 57
+	INFIX	shift 52
+	INFIXR	shift 51
+	LET	shift 450
+	LOCAL	shift 47
+	NONFIX	shift 45
+	OPEN	shift 43
+	OVERLOAD	shift 42
+	SEMICOLON	shift 149
+	STRUCT	shift 449
+	STRUCTURE	shift 38
+	TYPE	shift 37
+	VAL	shift 36
+	SHOW_BASIS	shift 26
+
+	decnolocal	goto 21
+	fctid	goto 448
+	fixity	goto 17
+	longAlphanumId	goto 140
+	longstrid	goto 447
+	shortAlphanumId	goto 446
+	strdec	goto 148
+	strdecnode	goto 7
+	strdecs	goto 561
+	strdecsnode	goto 146
+	strexp	goto 560
+	strexp1	goto 559
+	strexp2node	goto 558
+	strexpnode	goto 440
+	strid	goto 137
+
+	.	reduce by rule 11
+
+
+state 522:
+
+	strexp2node : STRUCT strdecs . END 
+
+	END	shift 562
+
+
+	.	error
+
+
+state 523:
+
+	strexp2node : LET strdecs . IN strexp END 
+
+	IN	shift 563
+
+
+	.	error
+
+
+state 524:
+
+	whereeqns' : WHERE whereeqn .  (reduce by rule 44)
+	whereeqns' : WHERE whereeqn . whereeqns' 
+	whereeqns' : WHERE whereeqn . whereandeqns 
+
+	AND	shift 566
+	WHERE	shift 453
+
+	whereandeqns	goto 565
+	whereeqns'	goto 564
+
+	.	reduce by rule 44
+
+
+state 525:
+
+	whereeqn : TYPE . tyvars longtycon EQUALOP ty 
+
+	TYVAR	shift 118
+	LPAREN	shift 125
+
+	tyvar	goto 102
+	tyvars	goto 567
+	tyvarseq	goto 119
+
+	.	reduce by rule 151
+
+
+state 526:
+
+	sigexp'node : SIG specs END .  (reduce by rule 53)
+
+
+
+	.	reduce by rule 53
+
+
+state 527:
+
+	sigbinds' : WHERE whereeqn . sigbinds'' 
+
+	AND	shift 570
+	WHERE	shift 456
+
+	sigbinds'	goto 569
+	sigbinds''	goto 568
+
+	.	reduce by rule 54
+
+
+state 528:
+
+	sigbinds' : AND sigbinds .  (reduce by rule 55)
+
+
+
+	.	reduce by rule 55
+
+
+state 529:
+
+	decnolocal : OVERLOAD priority vid COLON ty AS . longvidands 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	ASTERISK	shift 64
+	EQUALOP	shift 61
+
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 572
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	longvidands	goto 571
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+
+	.	error
+
+
+state 530:
+
+	decnode : LOCAL decs IN decs END .  (reduce by rule 116)
+
+
+
+	.	reduce by rule 116
+
+
+state 531:
+
+	expnode : exp . HANDLE match 
+	expnode : exp . ORELSE exp 
+	expnode : exp . ANDALSO exp 
+	expnode : exp . COLON ty 
+	expnode : IF exp THEN exp ELSE exp .  (reduce by rule 213)
+
+	ANDALSO	shift 85
+	COLON	shift 84
+	HANDLE	shift 83
+	ORELSE	shift 82
+
+
+	.	reduce by rule 213
+
+
+state 532:
+
+	fctarg : strid COLON sigexp .  (reduce by rule 109)
+
+
+
+	.	reduce by rule 109
+
+
+state 533:
+
+	funbinds : fctid LPAREN fctarg RPAREN sigconst . EQUALOP funbinds' 
+
+	EQUALOP	shift 573
+
+
+	.	error
+
+
+state 534:
+
+	valdesc : vid COLON . ty 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 574
+	ty'	goto 216
+	ty'node	goto 215
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 535:
+
+	valdescs : valdesc AND . valdescs 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	ASTERISK	shift 64
+	EQUALOP	shift 61
+
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	valdesc	goto 468
+	valdescs	goto 575
+	vid	goto 466
+	vidEqual	goto 79
+	vidNoEqual	goto 78
+
+	.	error
+
+
+state 536:
+
+	tb : tyvars tycon . EQUALOP ty 
+	typdesc : tyvars tycon .  (reduce by rule 91)
+
+	EQUALOP	shift 356
+
+
+	.	reduce by rule 91
+
+
+state 537:
+
+	typdescs : typdesc AND . typdescs 
+
+	TYVAR	shift 118
+	LPAREN	shift 125
+
+	typdesc	goto 471
+	typdescs	goto 576
+	tyvar	goto 102
+	tyvars	goto 484
+	tyvarseq	goto 119
+
+	.	reduce by rule 151
+
+
+state 538:
+
+	strdescs : strid COLON . sigexp' strdescs' 
+
+	SHORTALPHANUMID	shift 72
+	SIG	shift 363
+
+	shortAlphanumId	goto 131
+	sigexp'	goto 577
+	sigexp'node	goto 360
+	sigid	goto 359
+
+	.	error
+
+
+state 539:
+
+	longstrideqns : longstrid EQUALOP . longstrid 
+	longstrideqns : longstrid EQUALOP . longstrideqns 
+
+	SHORTALPHANUMID	shift 72
+	LONGALPHANUMID	shift 70
+
+	longAlphanumId	goto 140
+	longstrid	goto 579
+	longstrideqns	goto 578
+	shortAlphanumId	goto 128
+	strid	goto 137
+
+	.	error
+
+
+state 540:
+
+	sharespec : SHARING TYPE longtyconeqns .  (reduce by rule 77)
+
+
+
+	.	reduce by rule 77
+
+
+state 541:
+
+	longtyconeqns : longtycon . EQUALOP longtycon 
+	longtyconeqns : longtycon . EQUALOP longtyconeqns 
+
+	EQUALOP	shift 580
+
+
+	.	error
+
+
+state 542:
+
+	specnode : INCLUDE sigid sigids .  (reduce by rule 75)
+
+
+
+	.	reduce by rule 75
+
+
+state 543:
+
+	sigids : sigid .  (reduce by rule 349)
+	sigids : sigid . sigids 
+
+	SHORTALPHANUMID	shift 72
+
+	shortAlphanumId	goto 131
+	sigid	goto 543
+	sigids	goto 581
+
+	.	reduce by rule 349
+
+
+state 544:
+
+	exndescs : exndesc AND . exndescs 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	ASTERISK	shift 64
+	EQUALOP	shift 61
+
+	con	goto 483
+	exndesc	goto 482
+	exndescs	goto 582
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vid	goto 191
+	vidEqual	goto 79
+	vidNoEqual	goto 78
+
+	.	error
+
+
+state 545:
+
+	exndesc : con tyOpt .  (reduce by rule 97)
+
+
+
+	.	reduce by rule 97
+
+
+state 546:
+
+	tyOpt : OF . ty 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 583
+	ty'	goto 216
+	ty'node	goto 215
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 547:
+
+	typdesc : tyvars tycon .  (reduce by rule 91)
+
+
+
+	.	reduce by rule 91
+
+
+state 548:
+
+	constr : opcon .  (reduce by rule 158)
+	constr : opcon . OF ty 
+
+	OF	shift 584
+
+
+	.	reduce by rule 158
+
+
+state 549:
+
+	db : tyvars tycon EQUALOP optbar constrs .  (reduce by rule 190)
+
+
+
+	.	reduce by rule 190
+
+
+state 550:
+
+	constrs : constr .  (reduce by rule 156)
+	constrs : constr . BAR constrs 
+
+	BAR	shift 585
+
+
+	.	reduce by rule 156
+
+
+state 551:
+
+	repl : tyvars tycon EQUALOP DATATYPE longtycon .  (reduce by rule 184)
+
+
+
+	.	reduce by rule 184
+
+
+state 552:
+
+	aexp : COMMAND_LINE_CONST string COLON ty EQUALOP constOrBool SEMICOLON .  (reduce by rule 234)
+
+
+
+	.	reduce by rule 234
+
+
+state 553:
+
+	rvalbind : pat EQUALOP FN match AND . rvalbind 
+
+	CHAR	shift 74
+	INT	shift 73
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	REAL	shift 68
+	STRING	shift 67
+	WORD	shift 66
+	ASTERISK	shift 64
+	HASHLBRACKET	shift 117
+	LBRACE	shift 116
+	LBRACKET	shift 115
+	LPAREN	shift 240
+	OP	shift 113
+	REC	shift 248
+	WILD	shift 111
+
+	apat	goto 110
+	apatnode	goto 109
+	apats	goto 108
+	const	goto 107
+	const'	goto 22
+	cpat	goto 106
+	cpatnode	goto 105
+	int	goto 16
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvidNoEqual	goto 104
+	pat	goto 247
+	rvalbind	goto 586
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidNoEqual	goto 2
+	word	goto 1
+
+	.	error
+
+
+state 554:
+
+	strbinds'2 : AND strbinds .  (reduce by rule 27)
+
+
+
+	.	reduce by rule 27
+
+
+state 555:
+
+	strbinds'1 : WHERE whereeqn . strbinds'1' 
+	whereeqns' : WHERE whereeqn .  (reduce by rule 44)
+	whereeqns' : WHERE whereeqn . whereeqns' 
+	whereeqns' : WHERE whereeqn . whereandeqns 
+
+	ABSTYPE	reduce by rule 26
+	AND	shift 589
+	COLON	reduce by rule 44
+	COLONGT	reduce by rule 44
+	DATATYPE	reduce by rule 26
+	END	reduce by rule 26
+	EOF	reduce by rule 26
+	EXCEPTION	reduce by rule 26
+	DO	reduce by rule 26
+	FUN	reduce by rule 26
+	FUNCTOR	reduce by rule 26
+	IN	reduce by rule 26
+	INFIX	reduce by rule 26
+	INFIXR	reduce by rule 26
+	LOCAL	reduce by rule 26
+	NONFIX	reduce by rule 26
+	OPEN	reduce by rule 26
+	OVERLOAD	reduce by rule 26
+	RPAREN	reduce by rule 26
+	SEMICOLON	reduce by rule 26
+	SIGNATURE	reduce by rule 26
+	STRUCTURE	reduce by rule 26
+	TYPE	reduce by rule 26
+	VAL	reduce by rule 26
+	WHERE	shift 517
+	SHOW_BASIS	reduce by rule 26
+
+	strbinds'1	goto 588
+	strbinds'1'	goto 587
+	strbinds'2	goto 515
+	whereandeqns	goto 565
+	whereeqns'	goto 564
+
+	.	error
+
+
+state 556:
+
+	strexp1 : strexp COLONGT sigexp' .  (reduce by rule 33)
+
+
+
+	.	reduce by rule 33
+
+
+state 557:
+
+	strexp1 : strexp COLON sigexp' .  (reduce by rule 32)
+
+
+
+	.	reduce by rule 32
+
+
+state 558:
+
+	strexpnode : strexp2node .  (reduce by rule 31)
+
+
+
+	.	reduce by rule 31
+
+
+state 559:
+
+	strexpnode : strexp1 .  (reduce by rule 29)
+	strexpnode : strexp1 . whereeqns 
+
+	WHERE	shift 453
+
+	whereeqns	goto 514
+	whereeqns'	goto 451
+
+	.	reduce by rule 29
+
+
+state 560:
+
+	arg_fct : LPAREN strexp . RPAREN 
+	strexp1 : strexp . COLON sigexp' 
+	strexp1 : strexp . COLONGT sigexp' 
+
+	COLON	shift 519
+	COLONGT	shift 518
+	RPAREN	shift 590
+
+
+	.	error
+
+
+state 561:
+
+	arg_fct : LPAREN strdecs . RPAREN 
+
+	RPAREN	shift 591
+
+
+	.	error
+
+
+state 562:
+
+	strexp2node : STRUCT strdecs END .  (reduce by rule 36)
+
+
+
+	.	reduce by rule 36
+
+
+state 563:
+
+	strexp2node : LET strdecs IN . strexp END 
+
+	SHORTALPHANUMID	shift 72
+	LONGALPHANUMID	shift 70
+	LET	shift 450
+	STRUCT	shift 449
+
+	fctid	goto 448
+	longAlphanumId	goto 140
+	longstrid	goto 447
+	shortAlphanumId	goto 446
+	strexp	goto 592
+	strexp1	goto 559
+	strexp2node	goto 558
+	strexpnode	goto 440
+	strid	goto 137
+
+	.	error
+
+
+state 564:
+
+	whereeqns' : WHERE whereeqn whereeqns' .  (reduce by rule 45)
+
+
+
+	.	reduce by rule 45
+
+
+state 565:
+
+	whereeqns' : WHERE whereeqn whereandeqns .  (reduce by rule 46)
+
+
+
+	.	reduce by rule 46
+
+
+state 566:
+
+	whereandeqns : AND . whereeqn 
+	whereandeqns : AND . whereeqn whereandeqns 
+	whereandeqns : AND . whereeqn whereeqns' 
+
+	TYPE	shift 525
+
+	whereeqn	goto 593
+
+	.	error
+
+
+state 567:
+
+	whereeqn : TYPE tyvars . longtycon EQUALOP ty 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+
+	longAlphanumId	goto 222
+	longtycon	goto 594
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tycon	goto 214
+
+	.	error
+
+
+state 568:
+
+	sigbinds' : WHERE whereeqn sigbinds'' .  (reduce by rule 56)
+
+
+
+	.	reduce by rule 56
+
+
+state 569:
+
+	sigbinds'' : sigbinds' .  (reduce by rule 57)
+
+
+
+	.	reduce by rule 57
+
+
+state 570:
+
+	sigbinds' : AND . sigbinds 
+	sigbinds'' : AND . whereeqn sigbinds'' 
+
+	SHORTALPHANUMID	shift 72
+	TYPE	shift 525
+
+	shortAlphanumId	goto 131
+	sigbinds	goto 528
+	sigid	goto 129
+	whereeqn	goto 595
+
+	.	error
+
+
+state 571:
+
+	decnolocal : OVERLOAD priority vid COLON ty AS longvidands .  (reduce by rule 128)
+
+
+
+	.	reduce by rule 128
+
+
+state 572:
+
+	longvidands : longvid .  (reduce by rule 192)
+	longvidands : longvid . AND longvidands 
+
+	AND	shift 596
+
+
+	.	reduce by rule 192
+
+
+state 573:
+
+	funbinds : fctid LPAREN fctarg RPAREN sigconst EQUALOP . funbinds' 
+
+	SHORTALPHANUMID	shift 72
+	LONGALPHANUMID	shift 70
+	LET	shift 450
+	STRUCT	shift 449
+
+	fctid	goto 448
+	funbinds'	goto 599
+	longAlphanumId	goto 140
+	longstrid	goto 447
+	shortAlphanumId	goto 446
+	strexp	goto 444
+	strexp1	goto 598
+	strexp2	goto 597
+	strexp2node	goto 441
+	strexpnode	goto 440
+	strid	goto 137
+
+	.	error
+
+
+state 574:
+
+	tynode : ty . ARROW ty 
+	valdesc : vid COLON ty .  (reduce by rule 94)
+
+	ARROW	shift 318
+
+
+	.	reduce by rule 94
+
+
+state 575:
+
+	valdescs : valdesc AND valdescs .  (reduce by rule 93)
+
+
+
+	.	reduce by rule 93
+
+
+state 576:
+
+	typdescs : typdesc AND typdescs .  (reduce by rule 90)
+
+
+
+	.	reduce by rule 90
+
+
+state 577:
+
+	strdescs : strid COLON sigexp' . strdescs' 
+
+	AND	shift 602
+	WHERE	shift 601
+
+	strdescs'	goto 600
+
+	.	reduce by rule 84
+
+
+state 578:
+
+	longstrideqns : longstrid EQUALOP longstrideqns .  (reduce by rule 80)
+
+
+
+	.	reduce by rule 80
+
+
+state 579:
+
+	longstrideqns : longstrid . EQUALOP longstrid 
+	longstrideqns : longstrid EQUALOP longstrid .  (reduce by rule 79)
+	longstrideqns : longstrid . EQUALOP longstrideqns 
+
+	EQUALOP	shift 539
+
+
+	.	reduce by rule 79
+
+
+state 580:
+
+	longtyconeqns : longtycon EQUALOP . longtycon 
+	longtyconeqns : longtycon EQUALOP . longtyconeqns 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+
+	longAlphanumId	goto 222
+	longtycon	goto 604
+	longtyconeqns	goto 603
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tycon	goto 214
+
+	.	error
+
+
+state 581:
+
+	sigids : sigid sigids .  (reduce by rule 350)
+
+
+
+	.	reduce by rule 350
+
+
+state 582:
+
+	exndescs : exndesc AND exndescs .  (reduce by rule 96)
+
+
+
+	.	reduce by rule 96
+
+
+state 583:
+
+	tyOpt : OF ty .  (reduce by rule 99)
+	tynode : ty . ARROW ty 
+
+	ARROW	shift 318
+
+
+	.	reduce by rule 99
+
+
+state 584:
+
+	constr : opcon OF . ty 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 605
+	ty'	goto 216
+	ty'node	goto 215
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 585:
+
+	constrs : constr BAR . constrs 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	ASTERISK	shift 64
+	EQUALOP	shift 61
+	OP	shift 196
+
+	con	goto 195
+	constr	goto 550
+	constrs	goto 606
+	opcon	goto 548
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vid	goto 191
+	vidEqual	goto 79
+	vidNoEqual	goto 78
+
+	.	error
+
+
+state 586:
+
+	rvalbind : pat EQUALOP FN match AND rvalbind .  (reduce by rule 135)
+
+
+
+	.	reduce by rule 135
+
+
+state 587:
+
+	strbinds'1 : WHERE whereeqn strbinds'1' .  (reduce by rule 23)
+
+
+
+	.	reduce by rule 23
+
+
+state 588:
+
+	strbinds'1' : strbinds'1 .  (reduce by rule 24)
+
+
+
+	.	reduce by rule 24
+
+
+state 589:
+
+	strbinds'1' : AND . whereeqn strbinds'1' 
+	strbinds'2 : AND . strbinds 
+	whereandeqns : AND . whereeqn 
+	whereandeqns : AND . whereeqn whereandeqns 
+	whereandeqns : AND . whereeqn whereeqns' 
+
+	SHORTALPHANUMID	shift 72
+	TYPE	shift 525
+
+	shortAlphanumId	goto 128
+	strbinds	goto 554
+	strid	goto 126
+	whereeqn	goto 607
+
+	.	error
+
+
+state 590:
+
+	arg_fct : LPAREN strexp RPAREN .  (reduce by rule 39)
+
+
+
+	.	reduce by rule 39
+
+
+state 591:
+
+	arg_fct : LPAREN strdecs RPAREN .  (reduce by rule 40)
+
+
+
+	.	reduce by rule 40
+
+
+state 592:
+
+	strexp1 : strexp . COLON sigexp' 
+	strexp1 : strexp . COLONGT sigexp' 
+	strexp2node : LET strdecs IN strexp . END 
+
+	COLON	shift 519
+	COLONGT	shift 518
+	END	shift 608
+
+
+	.	error
+
+
+state 593:
+
+	whereandeqns : AND whereeqn .  (reduce by rule 47)
+	whereandeqns : AND whereeqn . whereandeqns 
+	whereandeqns : AND whereeqn . whereeqns' 
+
+	AND	shift 566
+	WHERE	shift 453
+
+	whereandeqns	goto 610
+	whereeqns'	goto 609
+
+	.	reduce by rule 47
+
+
+state 594:
+
+	whereeqn : TYPE tyvars longtycon . EQUALOP ty 
+
+	EQUALOP	shift 611
+
+
+	.	error
+
+
+state 595:
+
+	sigbinds'' : AND whereeqn . sigbinds'' 
+
+	AND	shift 570
+	WHERE	shift 456
+
+	sigbinds'	goto 569
+	sigbinds''	goto 612
+
+	.	reduce by rule 54
+
+
+state 596:
+
+	longvidands : longvid AND . longvidands 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	LONGSYMID	shift 69
+	ASTERISK	shift 64
+	EQUALOP	shift 61
+
+	longAlphanumId	goto 15
+	longSymId	goto 14
+	longvid	goto 572
+	longvidEqual	goto 12
+	longvidNoEqual	goto 11
+	longvidands	goto 613
+	shortAlphanumId	goto 10
+	shortSymId	goto 9
+	vidEqual	goto 3
+	vidNoEqual	goto 2
+
+	.	error
+
+
+state 597:
+
+	funbinds' : strexp2 . funbinds'2 
+
+	AND	shift 615
+
+	funbinds'2	goto 614
+
+	.	reduce by rule 105
+
+
+state 598:
+
+	funbinds' : strexp1 . funbinds'1 
+	strexpnode : strexp1 .  (reduce by rule 29)
+	strexpnode : strexp1 . whereeqns 
+
+	ABSTYPE	reduce by rule 105
+	AND	shift 615
+	COLON	reduce by rule 29
+	COLONGT	reduce by rule 29
+	DATATYPE	reduce by rule 105
+	EOF	reduce by rule 105
+	EXCEPTION	reduce by rule 105
+	DO	reduce by rule 105
+	FUN	reduce by rule 105
+	FUNCTOR	reduce by rule 105
+	INFIX	reduce by rule 105
+	INFIXR	reduce by rule 105
+	LOCAL	reduce by rule 105
+	NONFIX	reduce by rule 105
+	OPEN	reduce by rule 105
+	OVERLOAD	reduce by rule 105
+	SEMICOLON	reduce by rule 105
+	SIGNATURE	reduce by rule 105
+	STRUCTURE	reduce by rule 105
+	TYPE	reduce by rule 105
+	VAL	reduce by rule 105
+	WHERE	shift 618
+	SHOW_BASIS	reduce by rule 105
+
+	funbinds'1	goto 617
+	funbinds'2	goto 616
+	whereeqns	goto 514
+	whereeqns'	goto 451
+
+	.	error
+
+
+state 599:
+
+	funbinds : fctid LPAREN fctarg RPAREN sigconst EQUALOP funbinds' .  (reduce by rule 100)
+
+
+
+	.	reduce by rule 100
+
+
+state 600:
+
+	strdescs : strid COLON sigexp' strdescs' .  (reduce by rule 83)
+
+
+
+	.	reduce by rule 83
+
+
+state 601:
+
+	strdescs' : WHERE . whereeqn strdescs'' 
+
+	TYPE	shift 525
+
+	whereeqn	goto 619
+
+	.	error
+
+
+state 602:
+
+	strdescs' : AND . strdescs 
+
+	SHORTALPHANUMID	shift 72
+
+	shortAlphanumId	goto 128
+	strdescs	goto 620
+	strid	goto 473
+
+	.	error
+
+
+state 603:
+
+	longtyconeqns : longtycon EQUALOP longtyconeqns .  (reduce by rule 82)
+
+
+
+	.	reduce by rule 82
+
+
+state 604:
+
+	longtyconeqns : longtycon . EQUALOP longtycon 
+	longtyconeqns : longtycon EQUALOP longtycon .  (reduce by rule 81)
+	longtyconeqns : longtycon . EQUALOP longtyconeqns 
+
+	EQUALOP	shift 580
+
+
+	.	reduce by rule 81
+
+
+state 605:
+
+	constr : opcon OF ty .  (reduce by rule 159)
+	tynode : ty . ARROW ty 
+
+	ARROW	shift 318
+
+
+	.	reduce by rule 159
+
+
+state 606:
+
+	constrs : constr BAR constrs .  (reduce by rule 157)
+
+
+
+	.	reduce by rule 157
+
+
+state 607:
+
+	strbinds'1' : AND whereeqn . strbinds'1' 
+	whereandeqns : AND whereeqn .  (reduce by rule 47)
+	whereandeqns : AND whereeqn . whereandeqns 
+	whereandeqns : AND whereeqn . whereeqns' 
+
+	ABSTYPE	reduce by rule 26
+	AND	shift 589
+	COLON	reduce by rule 47
+	COLONGT	reduce by rule 47
+	DATATYPE	reduce by rule 26
+	END	reduce by rule 26
+	EOF	reduce by rule 26
+	EXCEPTION	reduce by rule 26
+	DO	reduce by rule 26
+	FUN	reduce by rule 26
+	FUNCTOR	reduce by rule 26
+	IN	reduce by rule 26
+	INFIX	reduce by rule 26
+	INFIXR	reduce by rule 26
+	LOCAL	reduce by rule 26
+	NONFIX	reduce by rule 26
+	OPEN	reduce by rule 26
+	OVERLOAD	reduce by rule 26
+	RPAREN	reduce by rule 26
+	SEMICOLON	reduce by rule 26
+	SIGNATURE	reduce by rule 26
+	STRUCTURE	reduce by rule 26
+	TYPE	reduce by rule 26
+	VAL	reduce by rule 26
+	WHERE	shift 517
+	SHOW_BASIS	reduce by rule 26
+
+	strbinds'1	goto 588
+	strbinds'1'	goto 621
+	strbinds'2	goto 515
+	whereandeqns	goto 610
+	whereeqns'	goto 609
+
+	.	error
+
+
+state 608:
+
+	strexp2node : LET strdecs IN strexp END .  (reduce by rule 38)
+
+
+
+	.	reduce by rule 38
+
+
+state 609:
+
+	whereandeqns : AND whereeqn whereeqns' .  (reduce by rule 49)
+
+
+
+	.	reduce by rule 49
+
+
+state 610:
+
+	whereandeqns : AND whereeqn whereandeqns .  (reduce by rule 48)
+
+
+
+	.	reduce by rule 48
+
+
+state 611:
+
+	whereeqn : TYPE tyvars longtycon EQUALOP . ty 
+
+	SHORTALPHANUMID	shift 72
+	SHORTSYMID	shift 71
+	LONGALPHANUMID	shift 70
+	TYVAR	shift 118
+	LBRACE	shift 224
+	LPAREN	shift 223
+
+	longAlphanumId	goto 222
+	longtycon	goto 221
+	shortAlphanumId	goto 220
+	shortSymId	goto 219
+	tuple_ty	goto 218
+	ty	goto 622
+	ty'	goto 216
+	ty'node	goto 215
+	tycon	goto 214
+	tynode	goto 213
+	tyvar	goto 212
+
+	.	error
+
+
+state 612:
+
+	sigbinds'' : AND whereeqn sigbinds'' .  (reduce by rule 58)
+
+
+
+	.	reduce by rule 58
+
+
+state 613:
+
+	longvidands : longvid AND longvidands .  (reduce by rule 193)
+
+
+
+	.	reduce by rule 193
+
+
+state 614:
+
+	funbinds' : strexp2 funbinds'2 .  (reduce by rule 102)
+
+
+
+	.	reduce by rule 102
+
+
+state 615:
+
+	funbinds'2 : AND . funbinds 
+
+	SHORTALPHANUMID	shift 72
+
+	fctid	goto 178
+	funbinds	goto 623
+	shortAlphanumId	goto 176
+
+	.	error
+
+
+state 616:
+
+	funbinds'1 : funbinds'2 .  (reduce by rule 103)
+
+
+
+	.	reduce by rule 103
+
+
+state 617:
+
+	funbinds' : strexp1 funbinds'1 .  (reduce by rule 101)
+
+
+
+	.	reduce by rule 101
+
+
+state 618:
+
+	funbinds'1 : WHERE . whereeqn funbinds'1' 
+	whereeqns' : WHERE . whereeqn 
+	whereeqns' : WHERE . whereeqn whereeqns' 
+	whereeqns' : WHERE . whereeqn whereandeqns 
+
+	TYPE	shift 525
+
+	whereeqn	goto 624
+
+	.	error
+
+
+state 619:
+
+	strdescs' : WHERE whereeqn . strdescs'' 
+
+	AND	shift 627
+	WHERE	shift 601
+
+	strdescs'	goto 626
+	strdescs''	goto 625
+
+	.	reduce by rule 84
+
+
+state 620:
+
+	strdescs' : AND strdescs .  (reduce by rule 85)
+
+
+
+	.	reduce by rule 85
+
+
+state 621:
+
+	strbinds'1' : AND whereeqn strbinds'1' .  (reduce by rule 25)
+
+
+
+	.	reduce by rule 25
+
+
+state 622:
+
+	tynode : ty . ARROW ty 
+	whereeqn : TYPE tyvars longtycon EQUALOP ty .  (reduce by rule 59)
+
+	ARROW	shift 318
+
+
+	.	reduce by rule 59
+
+
+state 623:
+
+	funbinds'2 : AND funbinds .  (reduce by rule 106)
+
+
+
+	.	reduce by rule 106
+
+
+state 624:
+
+	funbinds'1 : WHERE whereeqn . funbinds'1' 
+	whereeqns' : WHERE whereeqn .  (reduce by rule 44)
+	whereeqns' : WHERE whereeqn . whereeqns' 
+	whereeqns' : WHERE whereeqn . whereandeqns 
+
+	ABSTYPE	reduce by rule 105
+	AND	shift 630
+	COLON	reduce by rule 44
+	COLONGT	reduce by rule 44
+	DATATYPE	reduce by rule 105
+	EOF	reduce by rule 105
+	EXCEPTION	reduce by rule 105
+	DO	reduce by rule 105
+	FUN	reduce by rule 105
+	FUNCTOR	reduce by rule 105
+	INFIX	reduce by rule 105
+	INFIXR	reduce by rule 105
+	LOCAL	reduce by rule 105
+	NONFIX	reduce by rule 105
+	OPEN	reduce by rule 105
+	OVERLOAD	reduce by rule 105
+	SEMICOLON	reduce by rule 105
+	SIGNATURE	reduce by rule 105
+	STRUCTURE	reduce by rule 105
+	TYPE	reduce by rule 105
+	VAL	reduce by rule 105
+	WHERE	shift 618
+	SHOW_BASIS	reduce by rule 105
+
+	funbinds'1	goto 629
+	funbinds'1'	goto 628
+	funbinds'2	goto 616
+	whereandeqns	goto 565
+	whereeqns'	goto 564
+
+	.	error
+
+
+state 625:
+
+	strdescs' : WHERE whereeqn strdescs'' .  (reduce by rule 86)
+
+
+
+	.	reduce by rule 86
+
+
+state 626:
+
+	strdescs'' : strdescs' .  (reduce by rule 87)
+
+
+
+	.	reduce by rule 87
+
+
+state 627:
+
+	strdescs' : AND . strdescs 
+	strdescs'' : AND . whereeqn strdescs'' 
+
+	SHORTALPHANUMID	shift 72
+	TYPE	shift 525
+
+	shortAlphanumId	goto 128
+	strdescs	goto 620
+	strid	goto 473
+	whereeqn	goto 631
+
+	.	error
+
+
+state 628:
+
+	funbinds'1 : WHERE whereeqn funbinds'1' .  (reduce by rule 104)
+
+
+
+	.	reduce by rule 104
+
+
+state 629:
+
+	funbinds'1' : funbinds'1 .  (reduce by rule 107)
+
+
+
+	.	reduce by rule 107
+
+
+state 630:
+
+	funbinds'1' : AND . whereeqn funbinds'1' 
+	funbinds'2 : AND . funbinds 
+	whereandeqns : AND . whereeqn 
+	whereandeqns : AND . whereeqn whereandeqns 
+	whereandeqns : AND . whereeqn whereeqns' 
+
+	SHORTALPHANUMID	shift 72
+	TYPE	shift 525
+
+	fctid	goto 178
+	funbinds	goto 623
+	shortAlphanumId	goto 176
+	whereeqn	goto 632
+
+	.	error
+
+
+state 631:
+
+	strdescs'' : AND whereeqn . strdescs'' 
+
+	AND	shift 627
+	WHERE	shift 601
+
+	strdescs'	goto 626
+	strdescs''	goto 633
+
+	.	reduce by rule 84
+
+
+state 632:
+
+	funbinds'1' : AND whereeqn . funbinds'1' 
+	whereandeqns : AND whereeqn .  (reduce by rule 47)
+	whereandeqns : AND whereeqn . whereandeqns 
+	whereandeqns : AND whereeqn . whereeqns' 
+
+	ABSTYPE	reduce by rule 105
+	AND	shift 630
+	COLON	reduce by rule 47
+	COLONGT	reduce by rule 47
+	DATATYPE	reduce by rule 105
+	EOF	reduce by rule 105
+	EXCEPTION	reduce by rule 105
+	DO	reduce by rule 105
+	FUN	reduce by rule 105
+	FUNCTOR	reduce by rule 105
+	INFIX	reduce by rule 105
+	INFIXR	reduce by rule 105
+	LOCAL	reduce by rule 105
+	NONFIX	reduce by rule 105
+	OPEN	reduce by rule 105
+	OVERLOAD	reduce by rule 105
+	SEMICOLON	reduce by rule 105
+	SIGNATURE	reduce by rule 105
+	STRUCTURE	reduce by rule 105
+	TYPE	reduce by rule 105
+	VAL	reduce by rule 105
+	WHERE	shift 618
+	SHOW_BASIS	reduce by rule 105
+
+	funbinds'1	goto 629
+	funbinds'1'	goto 634
+	funbinds'2	goto 616
+	whereandeqns	goto 610
+	whereeqns'	goto 609
+
+	.	error
+
+
+state 633:
+
+	strdescs'' : AND whereeqn strdescs'' .  (reduce by rule 88)
+
+
+
+	.	reduce by rule 88
+
+
+state 634:
+
+	funbinds'1' : AND whereeqn funbinds'1' .  (reduce by rule 108)
+
+
+
+	.	reduce by rule 108
+
+
+state 635:
+
+
+	EOF	accept
+
+
+	.	error
+
+1118 of 3080 action table entries left after compaction
+1838 goto table entries

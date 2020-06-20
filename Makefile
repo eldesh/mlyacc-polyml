@@ -73,6 +73,15 @@ $(NAME).pdf: doc/mlyacc.pdf
 docs: $(DOCS)
 
 
+.PHONY: test
+test: $(NAME)
+	$(NAME) test/ml.grm
+	$(DIFF) test/ml.grm.sig  test/ml.grm.sig.exp
+	$(DIFF) test/ml.grm.sml  test/ml.grm.sml.exp
+	$(DIFF) test/ml.grm.desc test/ml.grm.desc.exp
+	$(RM)   test/ml.grm.{sig, sml, desc}
+
+
 .PHONY: install
 ifeq ($(shell which $(PDFLATEX) 2>/dev/null),)
 install: $(NAME)
@@ -82,7 +91,6 @@ install: $(NAME) $(DOCS)
 	install -D -m 0755 -t $(PREFIX)/bin/                 $(NAME)
 	install -D -m 0444 -t $(PREFIX)/share/mlyacc-polyml/ $(DOCS)
 endif
-
 
 
 .PHONY: clean
