@@ -1,0 +1,10 @@
+# make
+mlyacc-polyml
+mlyacc-polyml.o
+libmlyacc.poly
+# make doc
+doc/mlyacc.pdf
+mlyacc-polyml.pdf
+*.aux
+*.log
+*.toc
