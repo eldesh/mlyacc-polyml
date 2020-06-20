@@ -85,10 +85,12 @@ test: $(NAME)
 .PHONY: install
 ifeq ($(shell which $(PDFLATEX) 2>/dev/null),)
 install: $(NAME)
-	install -D -m 0755 -t $(PREFIX)/bin/                $(NAME)
+	install -D -m 0755 -t $(PREFIX)/bin/                 $(NAME)
+	install -D -m 0644 -t $(PREFIX)/lib/polyml           $(LIBNAME)
 else
 install: $(NAME) $(DOCS)
 	install -D -m 0755 -t $(PREFIX)/bin/                 $(NAME)
+	install -D -m 0644 -t $(PREFIX)/lib/polyml           $(LIBNAME)
 	install -D -m 0444 -t $(PREFIX)/share/mlyacc-polyml/ $(DOCS)
 endif
 
