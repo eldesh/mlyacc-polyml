@@ -17,8 +17,11 @@ NAME        := mlyacc-polyml
 LIBNAME     := libmlyacc.poly
 
 
-SRCS     := $(wildcard src/*)
 LIB_SRCS := $(wildcard lib/*)
+SRCS     := $(wildcard src/*) \
+            src/yacc.lex.sml  \
+            src/yacc.grm.sig  \
+            src/yacc.grm.sml
 
 
 all:	$(NAME)
@@ -45,16 +48,16 @@ $(LIBNAME): $(LIB_SRCS)
 		--eval 'PolyML.SaveState.saveModule ("$@", MLYaccLib)'
 
 
-src/yacc.lex.sml: src/yacc.lex
-	-$(RM) $<.*
-	$(MLLEX) $<
-	chmod -w $<.*
+src/%.lex.sml: src/%.lex
+	@echo "  [MLLex] $@"
+	@$(MLLEX) $<
+	@chmod -w $<.*
 
 
 src/%.grm.sig src/%.grm.sml: src/%.grm
-	-$(RM) $<.* 
-	$(MLYACC) $<
-	chmod -w $<.*
+	@echo "  [MLYacc] $@"
+	@$(MLYACC) $<
+	@chmod -w $<.*
 
 
 .PHONY: clean
