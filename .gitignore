@@ -1,7 +1,7 @@
 # make
 mlyacc-polyml
 mlyacc-polyml.o
-libmlyacc.poly
+mlyacc-lib-1.0.0.poly
 # make doc
 doc/mlyacc.pdf
 mlyacc-polyml.pdf

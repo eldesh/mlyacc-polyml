@@ -13,8 +13,10 @@ DIFF        := diff
 
 PREFIX      := /usr/local
 
-NAME        := mlyacc-polyml
-LIBNAME     := libmlyacc.poly
+TARGET      := mlyacc-polyml
+
+MLYACCLIB_VERSION := 1.0.0
+MLYACCLIB   := mlyacc-lib-$(MLYACCLIB_VERSION).poly
 
 DOCS        := mlyacc-polyml.pdf
 
@@ -25,15 +27,15 @@ SRCS     := $(wildcard src/*) \
             src/yacc.grm.sml
 
 
-all:	$(NAME) $(DOCS)
+all:	$(TARGET) $(DOCS)
 
 
-$(NAME): $(NAME).o
+$(TARGET): $(TARGET).o
 	@echo "  [POLYMLC] $@"
 	@$(POLYMLC) -o $@ $^
 
 
-$(NAME).o: $(LIBNAME) $(SRCS)
+$(TARGET).o: $(MLYACCLIB) $(SRCS)
 	@echo "  [POLYML] $@"
 	@echo "" | $(POLYML) $(POLYMLFLAGS) \
 		--eval 'PolyML.loadModule "./$<"' \
@@ -41,7 +43,7 @@ $(NAME).o: $(LIBNAME) $(SRCS)
 		--eval 'PolyML.export ("$@", Main.main)'
 
 
-$(LIBNAME): $(LIB_SRCS)
+$(MLYACCLIB): $(LIB_SRCS)
 	@echo "  [POLYML] $@"
 	@echo "" | $(POLYML) $(POLYMLFLAGS) \
 		--eval 'load "lib/load.sml"' \
@@ -65,7 +67,7 @@ doc/mlyacc.pdf:
 	$(MAKE) -C doc PDFLATEX:=$(PDFLATEX) mlyacc.pdf
 
 
-$(NAME).pdf: doc/mlyacc.pdf
+$(TARGET).pdf: doc/mlyacc.pdf
 	cp doc/mlyacc.pdf $@
 
 
@@ -74,8 +76,8 @@ docs: $(DOCS)
 
 
 .PHONY: test
-test: $(NAME)
-	$(NAME) test/ml.grm
+test: $(TARGET)
+	./$(TARGET) test/ml.grm
 	$(DIFF) test/ml.grm.sig  test/ml.grm.sig.exp
 	$(DIFF) test/ml.grm.sml  test/ml.grm.sml.exp
 	$(DIFF) test/ml.grm.desc test/ml.grm.desc.exp
@@ -84,20 +86,20 @@ test: $(NAME)
 
 .PHONY: install
 ifeq ($(shell which $(PDFLATEX) 2>/dev/null),)
-install: $(NAME)
-	install -D -m 0755 -t $(PREFIX)/bin/                 $(NAME)
-	install -D -m 0644 -t $(PREFIX)/lib/polyml           $(LIBNAME)
+install: $(TARGET)
+	install -D -m 0755 -t $(PREFIX)/bin/                 $(TARGET)
+	install -D -m 0644 -t $(PREFIX)/lib/polyml           $(MLYACCLIB)
 else
-install: $(NAME) $(DOCS)
-	install -D -m 0755 -t $(PREFIX)/bin/                 $(NAME)
-	install -D -m 0644 -t $(PREFIX)/lib/polyml           $(LIBNAME)
+install: $(TARGET) $(DOCS)
+	install -D -m 0755 -t $(PREFIX)/bin/                 $(TARGET)
+	install -D -m 0644 -t $(PREFIX)/lib/polyml           $(MLYACCLIB)
 	install -D -m 0444 -t $(PREFIX)/share/mlyacc-polyml/ $(DOCS)
 endif
 
 
 .PHONY: clean
 clean:
-	-$(RM) $(NAME) $(NAME).o
-	-$(RM) $(LIBNAME)
+	-$(RM) $(TARGET) $(TARGET).o
+	-$(RM) $(MLYACCLIB)
 	$(MAKE) -C doc clean
 
