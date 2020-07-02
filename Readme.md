@@ -20,7 +20,22 @@ Perform `make` like below:
 $ make mlyacc-polyml
 ```
 
-`mlyacc-polyml` will be built.
+`mlyacc-lib-1.0.0` and `mlyacc-polyml` will be built.
+
+
+## Install
+
+Just type `make install`. This command install `mlyacc-polyml` to `/usr/local/bin`.
+
+```sh
+$ make install
+```
+
+You can change the installation location by using the `PREFIX` variable.
+
+```sh
+$ make install PREFIX=$HOME/bin
+```
 
 
 ## Use
@@ -35,6 +50,16 @@ $ ./mlyacc-polyml ml.grm
 $ ls ml.grm.*
 ml.grm.desc  ml.grm.sig  ml.grm.sml
 ```
+
+These generated files depend on `mlyacc-lib`.
+That library can be loaded as follows:
+
+```sh
+$ poly
+> PolyML.loadModule "/usr/local/lib/polyml/mlyacc-lib-1.0.0.poly";
+signature ARG_LEXER = ..
+```
+
 
 See `mlyacc-polyml.pdf` for details.
 
