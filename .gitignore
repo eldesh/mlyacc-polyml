@@ -8,3 +8,9 @@ mlyacc-polyml.pdf
 *.aux
 *.log
 *.toc
+# mlyacc
+*.grm.sml
+*.grm.sig
+*.grm.desc
+# mllex
+*.lex.sml

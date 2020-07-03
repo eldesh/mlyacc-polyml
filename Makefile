@@ -2,11 +2,9 @@
 
 POLYML      := poly
 POLYMLC     := polyc
-POLYMLFLAGS := -q --error-exit \
-               --eval 'PolyML.suffixes := ".sig"::(!PolyML.suffixes)' \
-               --use  script/load.sml
+POLYMLFLAGS := -q --error-exit --use $(shell readlink -f ./script/load.sml)
 MLLEX       := mllex-polyml
-MLYACC      := mlyacc-polyml
+MLYACC      := $(shell readlink -f mlyacc-polyml)
 
 PDFLATEX    := pdflatex
 DIFF        := diff
@@ -25,6 +23,16 @@ SRCS     := $(wildcard src/*) \
             src/yacc.lex.sml  \
             src/yacc.grm.sig  \
             src/yacc.grm.sml
+
+EXAMPLES := calc fol pascal
+
+export POLYML
+export POLYMLC
+export POLYMLFLAGS
+export MLLEX
+export MLYACC
+export MLYACCLIB_VERSION
+export MLYACCLIB
 
 
 all:	$(TARGET) $(DOCS)
@@ -51,16 +59,7 @@ $(MLYACCLIB): $(LIB_SRCS)
 		--eval 'PolyML.SaveState.saveModule ("$@", MLYaccLib)'
 
 
-src/%.lex.sml: src/%.lex
-	@echo "  [MLLex] $@"
-	@$(MLLEX) $<
-	@chmod -w $<.*
-
-
-src/%.grm.sig src/%.grm.sml: src/%.grm
-	@echo "  [MLYacc] $@"
-	@$(MLYACC) $<
-	@chmod -w $<.*
+include Makefile.mlyacc
 
 
 doc/mlyacc.pdf:
@@ -69,6 +68,11 @@ doc/mlyacc.pdf:
 
 $(TARGET).pdf: doc/mlyacc.pdf
 	cp doc/mlyacc.pdf $@
+
+
+.PHONY: examples
+examples: $(TARGET)
+	$(MAKE) -C ./examples MLYACCLIB=../$(MLYACCLIB)
 
 
 .PHONY: docs
@@ -101,5 +105,6 @@ endif
 clean:
 	-$(RM) $(TARGET) $(TARGET).o
 	-$(RM) $(MLYACCLIB)
+	$(MAKE) -C examples clean
 	$(MAKE) -C doc clean
 

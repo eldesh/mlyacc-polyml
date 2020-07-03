@@ -1,0 +1,12 @@
+
+%.lex.sml: %.lex
+	@echo "  [MLLex] $@"
+	@$(MLLEX) $<
+	@chmod -w $<.*
+
+
+%.grm.sig %.grm.sml: %.grm
+	@echo "  [MLYacc] $@"
+	@$(MLYACC) $<
+	@chmod -w $<.*
+
