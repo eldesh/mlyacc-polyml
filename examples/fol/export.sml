@@ -1,6 +1,6 @@
 val Fol =
   {
-    sigs      = [],
+    sigs      = ["PARSE"],
     structs   = ["Parse"],
     functors  = [],
     onStartup = NONE
