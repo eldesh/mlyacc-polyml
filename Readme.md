@@ -34,7 +34,7 @@ $ make install
 You can change the installation location by using the `PREFIX` variable.
 
 ```sh
-$ make install PREFIX=$HOME/bin
+$ make install PREFIX=~/.sml/polyml
 ```
 
 

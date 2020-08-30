@@ -91,13 +91,13 @@ test: $(TARGET)
 .PHONY: install
 ifeq ($(shell which $(PDFLATEX) 2>/dev/null),)
 install: $(TARGET)
-	install -D -m 0755 -t $(PREFIX)/bin/                 $(TARGET)
-	install -D -m 0644 -t $(PREFIX)/lib/polyml           $(MLYACCLIB)
+	install -D -m 0755 -t $(PREFIX)/bin                 $(TARGET)
+	install -D -m 0644 -t $(PREFIX)/lib                 $(MLYACCLIB)
 else
 install: $(TARGET) $(DOCS)
-	install -D -m 0755 -t $(PREFIX)/bin/                 $(TARGET)
-	install -D -m 0644 -t $(PREFIX)/lib/polyml           $(MLYACCLIB)
-	install -D -m 0444 -t $(PREFIX)/share/mlyacc-polyml/ $(DOCS)
+	install -D -m 0755 -t $(PREFIX)/bin                 $(TARGET)
+	install -D -m 0644 -t $(PREFIX)/lib                 $(MLYACCLIB)
+	install -D -m 0444 -t $(PREFIX)/share/mlyacc-polyml $(DOCS)
 endif
 
 
