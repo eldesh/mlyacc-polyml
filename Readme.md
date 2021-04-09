@@ -14,27 +14,32 @@ This repository publish MLYacc to be used from Poly/ML, and this is ported from 
 
 ## Build
 
-Perform `make` like below:
+To build `mlyacc-polyml`, run the `mlyacc-polyml` target or `mlyacc-polyml-nodocs` if you do not need documents.
 
 ```sh
 $ make mlyacc-polyml
 ```
 
-`mlyacc-lib-1.0.0` and `mlyacc-polyml` will be built.
-
 
 ## Install
 
-Just type `make install`. This command install `mlyacc-polyml` to `/usr/local/bin`.
+To install `mlyacc-polyml` and `mlyacc-lib-1.0.0.poly`, run the `install` target.
 
 ```sh
 $ make install
 ```
 
-You can change the installation location by using the `PREFIX` variable.
+By default, executables and binaries are installed to `/usr/local/polyml/{bin,lib}`.
+You can specify the installation location by using the `PREFIX` variable.
 
 ```sh
-$ make install PREFIX=~/.sml/polyml
+$ make install PREFIX=~/.sml/polyml/5.8.1
+```
+
+If you do not want to install documents, run the `install-nodocs` target.
+
+```sh
+$ make install-nodocs
 ```
 
 
@@ -44,7 +49,7 @@ $ make install PREFIX=~/.sml/polyml
 For example, you pass `ml.grm` to this program, `ml.grm.sml`, `ml.grm.sig` and `ml.grm.desc` will be generated.
 
 ```sh
-$ ./mlyacc-polyml ml.grm
+$ ./bin/mlyacc-polyml ml.grm
 
 1 shift/reduce conflict
 $ ls ml.grm.*
@@ -56,22 +61,27 @@ That library can be loaded as follows:
 
 ```sh
 $ poly
-> PolyML.loadModule "/usr/local/lib/polyml/mlyacc-lib-1.0.0.poly";
+> PolyML.loadModule "/usr/local/polyml/lib/mlyacc-lib-1.0.0.poly";
 signature ARG_LEXER = ..
 ```
 
 
-See `mlyacc-polyml.pdf` for details.
+See `doc/mlyacc-polyml.pdf` for details.
 
 
 ## Test
 
-Perform `make test`.
+To run unit tets, run the `test` target.
+
+```sh
+$ make test
+```
 
 
 ## Document
 
-`make docs` will generate `mlyacc-polyml.pdf`.
+To generate a document of mlyacc-polyml, run the `docs` target.
+This target generates `mlyacc-polyml.pdf` to the `doc` directory.
 
 
 ## License
