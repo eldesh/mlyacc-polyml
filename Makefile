@@ -72,6 +72,7 @@ $(LIBDIR)/$(MLYACCLIB): $(LIB_SRCS)
 include Makefile.mlyacc
 
 
+.PHONY: doc/mlyacc.pdf
 doc/mlyacc.pdf:
 	$(MAKE) -C doc PDFLATEX:=$(PDFLATEX) mlyacc.pdf
 
