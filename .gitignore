@@ -2,12 +2,8 @@
 bin/
 *.o
 *.poly
-# make doc
-doc/mlyacc.pdf
-mlyacc-polyml.pdf
-*.aux
-*.log
-*.toc
+# doc
+doc/mlyacc-polyml.pdf
 # mlyacc
 *.grm.sml
 *.grm.sig
