@@ -1,13 +1,9 @@
 # make
-mlyacc-polyml
-mlyacc-polyml.o
-mlyacc-lib-1.0.0.poly
-# make doc
-doc/mlyacc.pdf
-mlyacc-polyml.pdf
-*.aux
-*.log
-*.toc
+bin/
+*.o
+*.poly
+# doc
+doc/mlyacc-polyml.pdf
 # mlyacc
 *.grm.sml
 *.grm.sig

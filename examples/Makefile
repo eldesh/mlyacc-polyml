@@ -1,12 +1,17 @@
 ## Copyright (C) 2020 Takayuki Goto
 
-POLYML      ?= poly
-POLYMLC     ?= polyc
-POLYMLFLAGS ?= -q --error-exit --use ../script/load.sml
-MLLEX       ?= mllex-polyml
-MLYACC      ?= ../mlyacc-polyml
-MLYACCLIB_VERSION ?= 1.0.0
-MLYACCLIB   ?= ../mlyacc-lib-$(MLYACCLIB_VERSION).poly
+POLYML        ?= poly
+POLYMLC       ?= polyc
+POLYMLFLAGS   ?= -q --error-exit --use ../script/load.sml
+
+BINDIR        ?= ../bin
+LIBDIR        ?= ../lib
+
+MLLEX         ?= mllex-polyml
+MLYACC        ?= $(BINDIR)/mlyacc-polyml
+
+MLYACCLIB_VER ?= 1.0.0
+MLYACCLIB     ?= $(LIBDIR)/mlyacc-lib-$(MLYACCLIB_VERSION).poly
 
 EXAMPLES := calc.poly fol.poly pascal.poly
 
