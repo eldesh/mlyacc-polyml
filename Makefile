@@ -103,8 +103,8 @@ test: mlyacc-polyml-nodocs
 
 .PHONY: install-nodocs
 install-nodocs: mlyacc-polyml-nodocs
-	install -D -m 0755 -t $(PREFIX)/$(BINDIR) $(BINDIR)/$(MLYACC_POLYML)
-	install -D -m 0644 -t $(PREFIX)/$(LIBDIR) $(LIBDIR)/$(MLYACCLIB)
+	install -D -m 0755 -t $(PREFIX)/$(BINDIR)            $(BINDIR)/$(MLYACC_POLYML)
+	install -D -m 0644 -t $(PREFIX)/$(LIBDIR)/mlyacc-lib $(LIBDIR)/$(MLYACCLIB)
 
 
 .PHONY: install
